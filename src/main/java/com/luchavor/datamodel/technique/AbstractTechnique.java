@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class TechniqueBase implements Technique {
+public abstract class AbstractTechnique implements Technique {
 	
 	/* functionality implemented by both the the same way */
 	private String model;

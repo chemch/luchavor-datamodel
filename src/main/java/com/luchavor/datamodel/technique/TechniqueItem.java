@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper=true)
-public class SingleTechnique extends TechniqueBase {
+public class TechniqueItem extends AbstractTechnique {
 	
 	// custom print
 	public void print() {

@@ -2,7 +2,6 @@ package com.luchavor.datamodel.technique;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -12,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=true)
-public class CompositeTechnique extends TechniqueBase {
-
+public class TechniqueGroup extends AbstractTechnique {
+	
 	private List<Technique> techniques = new ArrayList<Technique>();
 	
 	// custom print
