@@ -1,5 +1,10 @@
 package com.luchavor.datamodel.technique;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class SingleTechnique extends TechniqueBase {
 	
 	// custom print
