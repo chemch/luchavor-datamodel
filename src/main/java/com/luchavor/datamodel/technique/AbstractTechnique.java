@@ -11,6 +11,7 @@ public abstract class AbstractTechnique implements Technique {
 	
 	/* functionality implemented by both the the same way */
 	private String model;
+	private String subModel;
 	private String mitreId; // t code for offensive techniques and d3 id for defensive techniques
 	private String tactic;
 	private String name;

@@ -2,11 +2,15 @@ package com.luchavor.datamodel.technique;
 
 public interface Technique {
 	
-	// model is either ATT&CK or D3FEND model
+	// model is either ATTACK or DEFEND model
 	public String getModel();
 	public void setModel(String model);
+	
+	// sub model is ICS or Mobile for ATTACK
+	public String getSubModel();
+	public void setSubModel(String subModel);
 
-	// mitre id is either t code for ATT&CK or D3 id for D3FEND
+	// mitre id is either t code for ATTACK or D3 id for DEFEND
 	public String getMitreId();
 	public void setMitreId(String id);
 

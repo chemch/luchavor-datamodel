@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
-public class InputTechnique  extends AbstractTechnique {
+public class ImportTechniqueItem  extends AbstractTechnique {
 	private String type;
 }

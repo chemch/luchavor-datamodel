@@ -1,7 +1,11 @@
-package com.luchavor.datamodel.technique;
+package com.luchavor.datamodel.techniquegroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.luchavor.datamodel.technique.AbstractTechnique;
+import com.luchavor.datamodel.technique.Technique;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
