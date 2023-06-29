@@ -31,8 +31,8 @@ public interface Technique {
 	public void setParentMitreId(String id);
 	
 	// tree level is the level in the tree where this technique sits 
-	public String getTreeLevel();
-	public void setTreeLevel(String level);
+	public int getTreeLevel();
+	public void setTreeLevel(int level);
 
 	/* functionality implemented by both single and composity independently */
 	public void print();
