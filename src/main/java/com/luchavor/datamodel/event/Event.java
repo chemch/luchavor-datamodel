@@ -5,5 +5,5 @@ import java.time.LocalDateTime;
 public interface Event {
 	// unix timestamp
 	public LocalDateTime getTimestamp();
-	public void setTimeStamp(LocalDateTime timestamp);
+	public void setTimestamp(LocalDateTime timestamp);
 }

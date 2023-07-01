@@ -12,8 +12,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public abstract class AbstractEvent implements Event {
-
 	private LocalDateTime timestamp;
-	
-	
 }
