@@ -1,7 +1,9 @@
 package com.luchavor.datamodel.event;
 
+import java.time.LocalDateTime;
+
 public interface Event {
-	// model is either ATTACK or DEFEND model
-	public String getModel();
-	public void setModel(String model);
+	// unix timestamp
+	public LocalDateTime getTimestamp();
+	public void setTimeStamp(LocalDateTime timestamp);
 }

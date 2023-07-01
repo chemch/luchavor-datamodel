@@ -1,14 +1,17 @@
 package com.luchavor.datamodel.technique;
 
+import com.luchavor.datamodel.mitre.ModelType;
+import com.luchavor.datamodel.mitre.SubModelType;
+
 public interface Technique {
 	
 	// model is either ATTACK or DEFEND model
-	public String getModel();
-	public void setModel(String model);
+	public ModelType getModel();
+	public void setModel(ModelType model);
 	
 	// sub model is ICS or Mobile for ATTACK
-	public String getSubModel();
-	public void setSubModel(String subModel);
+	public SubModelType getSubModel();
+	public void setSubModel(SubModelType subModel);
 
 	// mitre id is either t code for ATTACK or D3 id for DEFEND
 	public String getMitreId();

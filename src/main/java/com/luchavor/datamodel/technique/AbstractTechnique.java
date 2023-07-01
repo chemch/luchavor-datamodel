@@ -1,5 +1,8 @@
 package com.luchavor.datamodel.technique;
 
+import com.luchavor.datamodel.mitre.ModelType;
+import com.luchavor.datamodel.mitre.SubModelType;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +13,8 @@ import lombok.NoArgsConstructor;
 public abstract class AbstractTechnique implements Technique {
 	
 	/* functionality implemented by both the the same way */
-	private String model;
-	private String subModel;
+	private ModelType model;
+	private SubModelType subModel;
 	private String mitreId; // t code for offensive techniques and d3 id for defensive techniques
 	private String tactic;
 	private String name;
