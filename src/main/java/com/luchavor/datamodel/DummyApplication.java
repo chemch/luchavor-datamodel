@@ -17,7 +17,7 @@ public class DummyApplication {
 	}
 	
 	@Bean
-	CommandLineRunner deleteTechniques() {
+	CommandLineRunner printDummyStatement() {
 		return args -> {
 			log.info("Data Model Dummy Application Run Successfully");
 		};
