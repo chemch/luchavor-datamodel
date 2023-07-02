@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
 public class ImportTechniqueItem  extends AbstractTechnique {
-	private String type;
+	private TechniqueType type;
 }

@@ -10,6 +10,9 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper=true)
 public class Connection extends AbstractEvent {
+	// event type
+	private EventType eventType = EventType.CONNECTION;
+	// connection attributes
 	private String uid;
 	private InetAddress originatorIp;
 	private int originatorPort;
