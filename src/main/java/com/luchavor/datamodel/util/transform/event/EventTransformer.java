@@ -12,7 +12,14 @@ public class EventTransformer {
 			case "T":  // true
 				rv = true;
 				break;
+			case "1":  // true
+				rv = true;
+				break;
+			// false identifiers
 			case "F":  // false
+				rv = false;
+				break;
+			case "0":  // false
 				rv = false;
 				break;
 			default: // default to using existing value

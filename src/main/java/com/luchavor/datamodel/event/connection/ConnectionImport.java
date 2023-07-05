@@ -4,7 +4,7 @@ import com.luchavor.datamodel.event.EventType;
 import lombok.Data;
 
 @Data
-public class ConnectionEventImport {
+public class ConnectionImport {
 	private EventType eventType = EventType.CONNECTION;
 	private String timestamp; 
 	private String uid;
@@ -31,4 +31,5 @@ public class ConnectionEventImport {
 	private String innerVlan;
 	private String originatorMacAddress;
 	private String responderMacAddress;
+	private String speculativeService;
 }

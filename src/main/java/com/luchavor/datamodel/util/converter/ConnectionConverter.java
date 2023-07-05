@@ -1,12 +1,12 @@
 package com.luchavor.datamodel.util.converter;
 
-import com.luchavor.datamodel.event.connection.ConnectionEvent;
-import com.luchavor.datamodel.event.connection.ConnectionEventAdapter;
+import com.luchavor.datamodel.event.connection.Connection;
+import com.luchavor.datamodel.event.connection.ConnectionImpl;
+import com.luchavor.datamodel.event.connection.ConnectionAdapter;
 
-public class ConnectionEventConverter {
-	// converter to convert TechniqueItem to AttackTechnique
-	public ConnectionEvent toConnectionEvent( ConnectionEventAdapter adapter ) {
-		ConnectionEvent converted = new ConnectionEvent();
+public class ConnectionConverter {
+	public Connection toConnectionEvent( ConnectionAdapter adapter ) {
+		Connection converted = new ConnectionImpl();
 		// add converted attributes
 		converted.setTimestamp(adapter.getTimestamp());
 		converted.setUid(adapter.getUid());
@@ -33,7 +33,7 @@ public class ConnectionEventConverter {
 		converted.setInnerVlan(adapter.getInnerVlan());
 		converted.setOriginatorMacAddress(adapter.getOriginatorMacAddress());
 		converted.setResponderMacAddress(adapter.getResponderMacAddress());
-		// return adapter converted connection event
+		// return adapter converted event
 		return converted;
 	}
 }

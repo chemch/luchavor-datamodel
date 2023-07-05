@@ -4,11 +4,9 @@ import java.time.LocalDateTime;
 import com.luchavor.datamodel.common.Protocol;
 import com.luchavor.datamodel.event.EventType;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-public class ConnectionEvent implements Connection {
+public class ConnectionImpl implements Connection {
 	private EventType eventType = EventType.CONNECTION;
 	private LocalDateTime timestamp;
 	private String uid;
@@ -35,4 +33,5 @@ public class ConnectionEvent implements Connection {
 	private Integer innerVlan;
 	private String originatorMacAddress;
 	private String responderMacAddress;
+	private String speculativeService;
 }

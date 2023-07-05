@@ -1,34 +1,8 @@
 package com.luchavor.datamodel.event.connection;
 
-import java.time.LocalDateTime;
-import com.luchavor.datamodel.common.Protocol;
-import com.luchavor.datamodel.event.EventType;
+import com.luchavor.datamodel.event.Event;
 
-public interface Connection {
-	// event type (enum) (always set to CONNECTION for this event)
-	public EventType getEventType();
-	public void setEventType(EventType eventType);
-	// unix timestamp
-	public LocalDateTime getTimestamp();
-	public void setTimestamp(LocalDateTime timestamp);
-	//uid
-	public String getUid();
-	public void setUid(String uid);
-	// originator ip
-	public String getOriginatorIp();
-	public void setOriginatorIp(String originatorIp);
-	// originator port
-	public Integer getOriginatorPort();
-	public void setOriginatorPort(Integer originatorPort);
-	// responder ip
-	public String getResponderIp();
-	public void setResponderIp(String responderIp);
-	// responder port
-	public Integer getResponderPort();
-	public void setResponderPort(Integer responderPort);
-	// protol (enum)
-	public Protocol getProtocol();
-	public void setProtocol(Protocol protocol);
+public interface Connection extends Event {
 	// service
 	public String getService();
 	public void setService(String service);
@@ -83,4 +57,7 @@ public interface Connection {
 	// responder mac 
 	public String getResponderMacAddress();
 	public void setResponderMacAddress(String responderMacAddress);
+	// speculative service
+	public String getSpeculativeService();
+	public void setSpeculativeService(String service);
 }
