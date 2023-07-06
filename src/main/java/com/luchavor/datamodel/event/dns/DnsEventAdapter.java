@@ -245,24 +245,36 @@ public class DnsEventAdapter implements Dns {
 	}
 
 	@Override
-	public String getAnswers() {
-		String sanitized = eventTransformer.sanitize(dnsEventImport.getAnswers());
-		return(sanitized == null ? null : sanitized);
+	public String[] getAnswers() {
+		// get raw answers
+		String[] answers = dnsEventImport.getAnswers().split(",");
+		// return null for arrays with only -
+		if( answers.length == 1 && eventTransformer.sanitize(answers[0]) == null ) {
+			return( null );
+		}
+		// return value
+		return(answers);
 	}
 
 	@Override
-	public void setAnswers(String answers) {
+	public void setAnswers(String[] answers) {
 		throw new UnsupportedOperationException();	
 	}
 
 	@Override
-	public String getTtls() {
-		String sanitized = eventTransformer.sanitize(dnsEventImport.getTtls());
-		return(sanitized == null ? null : sanitized);
+	public String[] getTtls() {
+		// get raw values
+		String[] values = dnsEventImport.getTtls().split(",");
+		// return null for arrays with only -
+		if( values.length == 1 && eventTransformer.sanitize(values[0]) == null ) {
+			return( null );
+		}
+		// return converted values
+		return(values);
 	}
 
 	@Override
-	public void setTtls(String ttls) {
+	public void setTtls(String[] ttls) {
 		throw new UnsupportedOperationException();	
 	}
 

@@ -29,8 +29,8 @@ public class DnsEvent implements Dns {
 	private Boolean recursionDesiredFlag;
 	private Boolean recursionAvailableFlag;
 	private Boolean dnssecFlag;
-	private String answers;
-	private String ttls;
+	private String[] answers;
+	private String[] ttls;
 	private Boolean rejectedFlag;
 	private String authoritativeResponses;
 	private String additionalResponses;

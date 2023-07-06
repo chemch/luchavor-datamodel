@@ -46,11 +46,11 @@ public interface Dns extends Event {
 	public Boolean getDnssecFlag();
 	public void setDnssecFlag(Boolean flag);
 	// query answer array
-	public String getAnswers();
-	public void setAnswers(String answers);
+	public String[] getAnswers();
+	public void setAnswers(String[] answers);
 	// ttls for answers
-	public String getTtls();
-	public void setTtls(String ttls);
+	public String[] getTtls();
+	public void setTtls(String[] ttls);
 	// rejected flag
 	public Boolean getRejectedFlag();
 	public void setRejectedFlag(Boolean flag);
