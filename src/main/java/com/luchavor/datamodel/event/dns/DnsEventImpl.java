@@ -6,7 +6,7 @@ import com.luchavor.datamodel.event.EventType;
 import lombok.Data;
 
 @Data
-public class DnsEvent implements Dns {
+public class DnsEventImpl implements Dns {
 	private EventType eventType = EventType.DNS;
 	private LocalDateTime timestamp;
 	private String uid;

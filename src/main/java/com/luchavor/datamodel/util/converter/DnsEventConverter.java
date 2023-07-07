@@ -1,12 +1,12 @@
 package com.luchavor.datamodel.util.converter;
 
 import com.luchavor.datamodel.event.dns.Dns;
-import com.luchavor.datamodel.event.dns.DnsEvent;
+import com.luchavor.datamodel.event.dns.DnsEventImpl;
 import com.luchavor.datamodel.event.dns.DnsEventAdapter;
 
 public class DnsEventConverter {
 	public Dns toDnsEvent( DnsEventAdapter adapter ) {
-		Dns converted = new DnsEvent();
+		Dns converted = new DnsEventImpl();
 		// add converted attributes
 		converted.setTimestamp(adapter.getTimestamp());
 		converted.setUid(adapter.getUid());
