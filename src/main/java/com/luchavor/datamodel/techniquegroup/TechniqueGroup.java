@@ -2,6 +2,11 @@ package com.luchavor.datamodel.techniquegroup;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
+
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Relationship;
 
 import com.luchavor.datamodel.technique.AbstractTechnique;
 import com.luchavor.datamodel.technique.Technique;
@@ -16,7 +21,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=true)
 public class TechniqueGroup extends AbstractTechnique {
-	
+	// neo4j id
+	@Id @GeneratedValue 
+	private UUID id;
+		
+	// neo4j list of child techniques
+	@Relationship(type = "CONTAINS")
 	private List<Technique> techniques = new ArrayList<Technique>();
 	
 	// custom print

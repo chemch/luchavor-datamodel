@@ -4,6 +4,9 @@ import com.luchavor.datamodel.mitre.ModelType;
 import com.luchavor.datamodel.mitre.SubModelType;
 
 public interface Technique {
+	// mitre id is either t code for ATTACK or D3 id for DEFEND
+	public String getMitreId();
+	public void setMitreId(String id);
 	
 	// model is either ATTACK or DEFEND model
 	public ModelType getModel();
@@ -12,10 +15,6 @@ public interface Technique {
 	// sub model is ICS or Mobile for ATTACK
 	public SubModelType getSubModel();
 	public void setSubModel(SubModelType subModel);
-
-	// mitre id is either t code for ATTACK or D3 id for DEFEND
-	public String getMitreId();
-	public void setMitreId(String id);
 
 	// tactic getters and setters
 	public String getTactic();
@@ -33,10 +32,6 @@ public interface Technique {
 	public String getParentMitreId();
 	public void setParentMitreId(String id);
 	
-	// tree level is the level in the tree where this technique sits 
-	public int getTreeLevel();
-	public void setTreeLevel(int level);
-
 	/* functionality implemented by both single and composity independently */
 	public void print();
 	

@@ -20,7 +20,6 @@ public abstract class AbstractTechnique implements Technique {
 	private String name;
 	private String description;
 	private String parentMitreId;
-	private int treeLevel;
 
 	/* functionality implemented by both independently */
 	public void print() {
