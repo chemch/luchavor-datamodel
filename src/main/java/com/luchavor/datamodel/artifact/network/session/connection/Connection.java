@@ -1,8 +1,8 @@
-package com.luchavor.datamodel.event.connection;
+package com.luchavor.datamodel.artifact.network.session.connection;
 
-import com.luchavor.datamodel.event.Event;
+import com.luchavor.datamodel.artifact.network.session.event.SessionEvent;
 
-public interface Connection extends Event {
+public interface Connection extends SessionEvent {
 	// service
 	public String getService();
 	public void setService(String service);

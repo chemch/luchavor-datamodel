@@ -1,9 +1,15 @@
 package com.luchavor.datamodel.technique;
 
+import java.util.UUID;
+
 import com.luchavor.datamodel.mitre.ModelType;
 import com.luchavor.datamodel.mitre.SubModelType;
 
 public interface Technique {
+	// neo4j id
+	public UUID getId();
+	public void setId(UUID uuid);
+	
 	// mitre id is either t code for ATTACK or D3 id for DEFEND
 	public String getMitreId();
 	public void setMitreId(String id);
@@ -31,9 +37,6 @@ public interface Technique {
 	// parent mitre id is either t code for ATT&CK or D3 id for D3FEND
 	public String getParentMitreId();
 	public void setParentMitreId(String id);
-	
-	/* functionality implemented by both single and composity independently */
-	public void print();
 	
 	/* functionality implemented by composite only */
 	public void add(Technique technique);

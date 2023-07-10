@@ -1,8 +1,8 @@
-package com.luchavor.datamodel.event.dns;
+package com.luchavor.datamodel.artifact.network.session.dns;
 
-import com.luchavor.datamodel.event.Event;
+import com.luchavor.datamodel.artifact.network.session.event.SessionEvent;
 
-public interface Dns extends Event {
+public interface DnsEvent extends SessionEvent {
 	// transaction id
 	public Integer getTransactionId();
 	public void setTransactionId(Integer transactionId);

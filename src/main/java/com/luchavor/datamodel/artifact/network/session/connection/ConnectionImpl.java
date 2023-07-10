@@ -1,20 +1,36 @@
-package com.luchavor.datamodel.event.connection;
+package com.luchavor.datamodel.artifact.network.session.connection;
 
 import java.time.LocalDateTime;
-import com.luchavor.datamodel.common.Protocol;
-import com.luchavor.datamodel.event.EventType;
+import java.util.UUID;
+
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+
+import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocol;
+import com.luchavor.datamodel.artifact.network.session.event.SessionEventType;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Node("Connection")
 public class ConnectionImpl implements Connection {
-	private EventType eventType = EventType.CONNECTION;
+	/* neo4j id */
+	@Id @GeneratedValue 
+	private UUID id;
+	// static session event type
+	private SessionEventType sessionEventType = SessionEventType.CONNECTION;
+	// event attributes
 	private LocalDateTime timestamp;
 	private String uid;
 	private String originatorIp;
 	private Integer originatorPort;
 	private String responderIp;
 	private Integer responderPort;
-	private Protocol protocol;
+	private SessionEventProtocol sessionEventProtocol;
 	private String service;
 	private Double duration;
 	private Integer originatorPayloadByteCount;
