@@ -1,36 +1,22 @@
 package com.luchavor.datamodel.artifact.network.session.connection;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
-
-import org.springframework.data.neo4j.core.schema.GeneratedValue;
-import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
-
-import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocol;
+import com.luchavor.datamodel.artifact.network.session.event.AbstractSessionEvent;
+import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocolType;
 import com.luchavor.datamodel.artifact.network.session.event.SessionEventType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper=false)
 @Node("Connection")
-public class ConnectionImpl implements Connection {
-	/* neo4j id */
-	@Id @GeneratedValue 
-	private UUID id;
+public class ConnectionImpl extends AbstractSessionEvent implements Connection {
 	// static session event type
 	private SessionEventType sessionEventType = SessionEventType.CONNECTION;
-	// event attributes
-	private LocalDateTime timestamp;
-	private String uid;
-	private String originatorIp;
-	private Integer originatorPort;
-	private String responderIp;
-	private Integer responderPort;
-	private SessionEventProtocol sessionEventProtocol;
 	private String service;
 	private Double duration;
 	private Integer originatorPayloadByteCount;
@@ -50,4 +36,5 @@ public class ConnectionImpl implements Connection {
 	private String originatorMacAddress;
 	private String responderMacAddress;
 	private String speculativeService;
+	private SessionEventProtocolType sessionEventProtocolType;
 }

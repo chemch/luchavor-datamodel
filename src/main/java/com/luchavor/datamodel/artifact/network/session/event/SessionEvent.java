@@ -35,8 +35,4 @@ public interface SessionEvent {
 	// responder port
 	public Integer getResponderPort();
 	public void setResponderPort(Integer responderPort);
-	
-	// protocol (enum)
-	public SessionEventProtocol getSessionEventProtocol();
-	public void setSessionEventProtocol(SessionEventProtocol protocol);
 }

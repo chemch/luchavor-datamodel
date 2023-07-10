@@ -1,6 +1,7 @@
 package com.luchavor.datamodel.artifact.network.session.connection;
 
 import com.luchavor.datamodel.artifact.network.session.event.SessionEvent;
+import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocolType;
 
 public interface Connection extends SessionEvent {
 	// service
@@ -60,4 +61,7 @@ public interface Connection extends SessionEvent {
 	// speculative service
 	public String getSpeculativeService();
 	public void setSpeculativeService(String service);
+	// protocol (enum)
+	public SessionEventProtocolType getSessionEventProtocolType();
+	public void setSessionEventProtocolType(SessionEventProtocolType protocol);
 }
