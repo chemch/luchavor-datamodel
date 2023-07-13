@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
-@Node("Connection")
+@Node("SslEvent")
 public class ConnectionImpl extends AbstractSessionEvent implements Connection {
 	// static session event type
 	private SessionEventType sessionEventType = SessionEventType.CONNECTION;
