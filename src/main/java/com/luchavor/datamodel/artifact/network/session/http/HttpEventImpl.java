@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
-@Node("NtlmEvent")
+@Node("RpcEvent")
 public class HttpEventImpl extends AbstractSessionEvent implements HttpEvent {
 	// static session event type
 	private SessionEventType sessionEventType = SessionEventType.HTTP;

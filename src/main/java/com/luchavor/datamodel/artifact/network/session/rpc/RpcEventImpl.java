@@ -1,4 +1,4 @@
-package com.luchavor.datamodel.artifact.network.session.ntlm;
+package com.luchavor.datamodel.artifact.network.session.rpc;
 
 import org.springframework.data.neo4j.core.schema.Node;
 import com.luchavor.datamodel.artifact.network.session.event.AbstractSessionEvent;
@@ -13,14 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
 @Node("RpcEvent")
-public class NtlmEventImpl extends AbstractSessionEvent implements NtlmEvent {
+public class RpcEventImpl extends AbstractSessionEvent implements RpcEvent {
 	// static session event type
-	private SessionEventType sessionEventType = SessionEventType.NTLM;
-	private String username;
-	private String hostname;
-	private String domainName;
-	private String serverNetbiosName;
-	private String serverDnsName;
-	private String serverTreeName;
-	private Boolean successFlag;
+	private SessionEventType sessionEventType = SessionEventType.RPC;
+	private Double roundTripTime;
+	private String namedPipe;
+	private String endpoint;
+	private String operation;
 }
