@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
-@Node("RpcEvent")
+@Node("SmbEvent")
 public class NtlmEventImpl extends AbstractSessionEvent implements NtlmEvent {
 	// static session event type
 	private SessionEventType sessionEventType = SessionEventType.NTLM;

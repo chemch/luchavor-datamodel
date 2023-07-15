@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)
-@Node("RpcEvent")
+@Node("SmbEvent")
 public class KerberosEventImpl extends AbstractSessionEvent implements KerberosEvent {
 	// static session event type
 	private SessionEventType sessionEventType = SessionEventType.KERBEROS;
