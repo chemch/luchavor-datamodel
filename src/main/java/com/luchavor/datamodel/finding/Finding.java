@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import com.luchavor.datamodel.artifact.Artifact;
 import com.luchavor.datamodel.detection.Detection;
+import com.luchavor.datamodel.finding.state.FindingState;
 import com.luchavor.datamodel.inference.Inference;
 
 public interface Finding<F, D, I, A> {
@@ -31,4 +32,13 @@ public interface Finding<F, D, I, A> {
 	// based artifact(s)
 	public List<Artifact<A>> getArtifacts();
 	public void setArtifacts(List<Artifact<A>> artifacts);
+	
+	// current finding state
+	public FindingState getCurrentFindingState();
+	public void setCurrentFindingState(FindingState findingState);
+		
+	// finding state options
+	public FindingState getConfirmedFindingState();
+	public FindingState getPotentialFindingState();
+	public FindingState getRefutedFindingState();
 }

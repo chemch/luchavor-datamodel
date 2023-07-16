@@ -23,8 +23,8 @@ public interface Technique {
 	public void setSubModel(SubModelType subModel);
 
 	// tactic getters and setters
-	public String getTactic();
-	public void setTactic(String tactic);
+	public String[] getTactic();
+	public void setTactic(String[] tactic);
 	
 	// technique name
 	public String getName();
