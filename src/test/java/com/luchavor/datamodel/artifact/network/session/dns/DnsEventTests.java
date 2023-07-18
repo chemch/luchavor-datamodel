@@ -8,7 +8,8 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocolType;
+
+import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 import com.luchavor.datamodel.util.DataTypeConverter;
 
 @SpringBootTest
@@ -20,13 +21,13 @@ public class DnsEventTests {
 		// test dns object
 		DnsEvent event = new DnsEventImpl();
 		// populate object attributes
-		event.setTimestamp(DataTypeConverter.convertEpochTimestamp(1689560080.32542));
+		event.setTimestamp(DataTypeConverter.convertDoubleEpochTimestamp(1689560080.32542));
 		event.setUid("Cn4DGr4nzlVfRjIZe7");
 		event.setOriginatorIp("172.23.250.132");
 		event.setOriginatorPort(36651);
 		event.setResponderIp("172.23.240.1");
 		event.setResponderPort(53);
-		event.setSessionEventProtocolType(SessionEventProtocolType.UDP);
+		event.setNetworkProtocolType(NetworkProtocolType.UDP);
 		event.setTransactionId(63055);
 		event.setRoundTripTime(null);
 		event.setQuery("132.250.23.172.in-addr.arpa");

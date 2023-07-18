@@ -1,7 +1,7 @@
 package com.luchavor.datamodel.artifact.network.session.dns;
 
+import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 import com.luchavor.datamodel.artifact.network.session.event.SessionEvent;
-import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocolType;
 
 public interface DnsEvent extends SessionEvent {
 	// transaction id
@@ -65,6 +65,6 @@ public interface DnsEvent extends SessionEvent {
 	public String getOriginalQuery();
 	public void setOriginalQuery(String query);
 	// protocol (enum)
-	public SessionEventProtocolType getSessionEventProtocolType();
-	public void setSessionEventProtocolType(SessionEventProtocolType protocol);
+	public NetworkProtocolType getNetworkProtocolType();
+	public void setNetworkProtocolType(NetworkProtocolType protocol);
 }

@@ -2,8 +2,8 @@ package com.luchavor.datamodel.artifact.network.session.dns;
 
 import org.springframework.data.neo4j.core.schema.Node;
 
+import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 import com.luchavor.datamodel.artifact.network.session.event.AbstractSessionEvent;
-import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocolType;
 import com.luchavor.datamodel.artifact.network.session.event.SessionEventType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -38,5 +38,5 @@ public class DnsEventImpl extends AbstractSessionEvent implements DnsEvent {
 	private String authoritativeResponses;
 	private String additionalResponses;
 	private String originalQuery;
-	private SessionEventProtocolType sessionEventProtocolType;
+	private NetworkProtocolType networkProtocolType;
 }

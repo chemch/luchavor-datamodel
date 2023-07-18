@@ -1,8 +1,9 @@
 package com.luchavor.datamodel.artifact.network.session.connection;
 
 import org.springframework.data.neo4j.core.schema.Node;
+
+import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 import com.luchavor.datamodel.artifact.network.session.event.AbstractSessionEvent;
-import com.luchavor.datamodel.artifact.network.session.event.SessionEventProtocolType;
 import com.luchavor.datamodel.artifact.network.session.event.SessionEventType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -36,5 +37,5 @@ public class ConnectionImpl extends AbstractSessionEvent implements Connection {
 	private String originatorMacAddress;
 	private String responderMacAddress;
 	private String speculativeService;
-	private SessionEventProtocolType sessionEventProtocolType;
+	private NetworkProtocolType networkProtocolType;
 }

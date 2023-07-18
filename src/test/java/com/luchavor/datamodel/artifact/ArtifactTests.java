@@ -41,6 +41,45 @@ public class ArtifactTests {
 		return artifact;
 	}
 	
+	public Artifact<Session> getArtifact3() {
+		// test object
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		Session session = sessionTests.getSession3();
+		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Session> getArtifact4() {
+		// test object
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		Session session = sessionTests.getSession4();
+		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Session> getArtifact5() {
+		// test object
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		Session session = sessionTests.getSession5();
+		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
 	@Test
     void shouldNotBeNull() throws Exception {
 		Artifact<?> artifact = getArtifact1();

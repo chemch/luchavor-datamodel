@@ -19,7 +19,7 @@ public class HttpEventTests {
 		// test object
 		HttpEvent event = new HttpEventImpl();
 		// populate object attributes
-		event.setTimestamp(DataTypeConverter.convertEpochTimestamp(1689644622.66883));
+		event.setTimestamp(DataTypeConverter.convertDoubleEpochTimestamp(1689644622.66883));
 		event.setUid("C4iJPc2hxZsJ39nz0f");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49558);
