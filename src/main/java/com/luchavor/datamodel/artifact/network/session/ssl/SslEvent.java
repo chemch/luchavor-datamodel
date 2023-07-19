@@ -39,4 +39,7 @@ public interface SslEvent extends SessionEvent {
 	// sni match flag
 	public Boolean getSniMatchFlag();
 	public void setSniMatchFlag(Boolean sniMatchFlag);
+	// validation status
+	public String getValidationStatus();
+	public void setValidationStatus(String validationStatus);
 }

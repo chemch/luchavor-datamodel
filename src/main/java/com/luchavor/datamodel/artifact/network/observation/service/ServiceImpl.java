@@ -1,4 +1,4 @@
-package com.luchavor.datamodel.artifact.network.observation;
+package com.luchavor.datamodel.artifact.network.observation.service;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -12,8 +12,8 @@ import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 import lombok.Data;
 
 @Data
-@Node("Service")
-public class Service {
+@Node("ServiceImpl")
+public class ServiceImpl implements Service {
 	/* neo4j id */
 	@Id @GeneratedValue 
 	private UUID id;

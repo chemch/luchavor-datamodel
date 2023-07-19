@@ -6,6 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
+import com.luchavor.datamodel.artifact.network.session.connection.Connection;
+import com.luchavor.datamodel.artifact.network.session.connection.ConnectionImpl;
 import com.luchavor.datamodel.util.DataTypeConverter;
 
 @SpringBootTest
@@ -176,6 +178,40 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
 		connection.setResponderMacAddress("18:03:73:21:54:f1");
+		connection.setSpeculativeService(null);
+		// return value
+		return(connection);
+	}
+	
+	public Connection getTestConnection6() {
+		// test connection object
+		Connection connection = new ConnectionImpl();
+		// populate connection
+		connection.setTimestamp(DataTypeConverter.convertDoubleEpochTimestamp(1689733348.6635));
+		connection.setUid("C9Mt4e1b7pjoRIC55k");
+		connection.setOriginatorIp("10.0.0.158");
+		connection.setOriginatorPort(49525);
+		connection.setResponderIp("87.120.8.98");
+		connection.setResponderPort(443);
+		connection.setNetworkProtocolType(NetworkProtocolType.TCP);
+		connection.setService("ssl");
+		connection.setDuration(.023268);
+		connection.setOriginatorPayloadByteCount(1171);
+		connection.setResponderPayloadByteCount(1907504);
+		connection.setConnectionState("SF");
+		connection.setLocalOriginatorFlag(true);
+		connection.setLocalResponderFlag(false);
+		connection.setMissedByteCount(15268);
+		connection.setStateHistory("ShADadgttFf");
+		connection.setOriginatorPacketCount(519);
+		connection.setOriginatorTotalByteCount(23279);
+		connection.setResponderPacketCount(1372);
+		connection.setResponderTotalByteCount(19471285);
+		connection.setParentTunnelUid(null);
+		connection.setVlan(null);
+		connection.setInnerVlan(null);
+		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
+		connection.setResponderMacAddress("00:35:1a:64:79:e2");
 		connection.setSpeculativeService(null);
 		// return value
 		return(connection);

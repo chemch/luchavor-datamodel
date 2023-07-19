@@ -4,12 +4,15 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 
+import com.luchavor.datamodel.artifact.network.session.Session;
+import com.luchavor.datamodel.artifact.network.session.SessionImpl;
 import com.luchavor.datamodel.artifact.network.session.connection.ConnectionTests;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEventTests;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEventTests;
 import com.luchavor.datamodel.artifact.network.session.kerberos.KerberosEventTests;
 import com.luchavor.datamodel.artifact.network.session.ntlm.NtlmEventTests;
 import com.luchavor.datamodel.artifact.network.session.rpc.RpcEventTests;
+import com.luchavor.datamodel.artifact.network.session.ssl.SslEventTests;
 
 public class SessionTests {
 	private ConnectionTests connectionTests = new ConnectionTests();
@@ -18,6 +21,7 @@ public class SessionTests {
 	private KerberosEventTests kerberosEventTests = new KerberosEventTests();
 	private NtlmEventTests ntlmEventTests = new NtlmEventTests();
 	private RpcEventTests rpcEventTests = new RpcEventTests();
+	private SslEventTests sslEventTests = new SslEventTests();
 	
 	public Session getSession1() {
 		// test object
@@ -63,8 +67,18 @@ public class SessionTests {
 		// test object
 		Session session = new SessionImpl();
 		// populate attributes
-		session.setConnection(connectionTests.getTestConnection4());
+		session.setConnection(connectionTests.getTestConnection5());
 		session.setRpcEvents(rpcEventTests.getRpcEventList1());
+		// return value
+		return session;
+	}
+	
+	public Session getSession6() {
+		// test object
+		Session session = new SessionImpl();
+		// populate attributes
+		session.setConnection(connectionTests.getTestConnection6());
+		session.setSslEvents(sslEventTests.getSslEventList1());
 		// return value
 		return session;
 	}

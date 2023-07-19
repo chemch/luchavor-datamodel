@@ -6,6 +6,15 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+
+import com.luchavor.datamodel.artifact.Artifact;
+import com.luchavor.datamodel.artifact.ArtifactImpl;
+import com.luchavor.datamodel.artifact.ArtifactSubType;
+import com.luchavor.datamodel.artifact.ArtifactType;
+import com.luchavor.datamodel.artifact.network.observation.host.Host;
+import com.luchavor.datamodel.artifact.network.observation.host.HostTests;
+import com.luchavor.datamodel.artifact.network.observation.service.Service;
+import com.luchavor.datamodel.artifact.network.observation.service.ServiceTests;
 import com.luchavor.datamodel.artifact.network.session.Session;
 import com.luchavor.datamodel.artifact.network.session.SessionTests;
 
@@ -14,6 +23,8 @@ import com.luchavor.datamodel.artifact.network.session.SessionTests;
 @ActiveProfiles("test")
 public class ArtifactTests {
 	private SessionTests sessionTests = new SessionTests();
+	private HostTests hostTests = new HostTests();
+	private ServiceTests serviceTests = new ServiceTests();
 	
 	public Artifact<Session> getArtifact1() {
 		// test object
@@ -76,6 +87,32 @@ public class ArtifactTests {
 		// set artifact value
 		Session session = sessionTests.getSession5();
 		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Host> getArtifact6() {
+		// test object
+		Artifact<Host> artifact = new ArtifactImpl<Host>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
+		// set artifact value
+		Host host = hostTests.getHost1();
+		artifact.setValue(host);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Service> getArtifact7() {
+		// test object
+		Artifact<Service> artifact = new ArtifactImpl<Service>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
+		// set artifact value
+		Service service = serviceTests.getService1();
+		artifact.setValue(service);
 		// return value
 		return artifact;
 	}

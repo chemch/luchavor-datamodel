@@ -28,4 +28,5 @@ public class SslEventImpl extends AbstractSessionEvent implements SslEvent {
 	private String certificateChain;
 	private String certificateChainFingerprint;
 	private Boolean sniMatchFlag;
+	private String validationStatus;
 }

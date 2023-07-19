@@ -8,6 +8,9 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+
+import com.luchavor.datamodel.artifact.network.session.http.HttpEvent;
+import com.luchavor.datamodel.artifact.network.session.http.HttpEventImpl;
 import com.luchavor.datamodel.util.DataTypeConverter;
 
 @SpringBootTest
