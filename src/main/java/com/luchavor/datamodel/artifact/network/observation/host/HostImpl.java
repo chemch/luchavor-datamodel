@@ -8,7 +8,7 @@ import org.springframework.data.neo4j.core.schema.Node;
 import lombok.Data;
 
 @Data
-@Node("HostImpl")
+@Node("ExecutableImpl")
 public class HostImpl implements Host {
 	/* neo4j id */
 	@Id @GeneratedValue 

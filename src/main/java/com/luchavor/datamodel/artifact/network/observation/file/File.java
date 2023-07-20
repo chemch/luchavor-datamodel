@@ -1,0 +1,60 @@
+package com.luchavor.datamodel.artifact.network.observation.file;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+public interface File {
+	public UUID getId();
+	public void setId(UUID id);
+	// observation fields
+	public LocalDateTime getTimestamp();
+	public void setTimestamp(LocalDateTime timestamp);
+	public String getUid();
+	public void setUid(String uid);
+	public String getTransmitHosts();
+	public void setTransmitHosts(String transmitHosts);
+	public String getReceiveHosts();
+	public void setReceiveHosts(String receiveHosts);
+	public String getConnectionUids();
+	public void setConnectionUids(String connectionUids);
+	public String getSource();
+	public void setSource(String source);
+	public Integer getDepth();
+	public void setDepth(Integer depth);
+	public String getAnalyzers();
+	public void setAnalyzers(String analyzers);
+	public String getMimeType();
+	public void setMimeType(String mimeType);
+	public String getFilename();
+	public void setFilename(String filename);
+	public Double getDuration();
+	public void setDuration(Double duration);
+	public Boolean getLocalOriginationFlag();
+	public void setLocalOriginationFlag(Boolean localOriginationFlag);
+	public Boolean getFromOriginatorFlag();
+	public void setFromOriginatorFlag(Boolean fromOriginatorFlag);
+	public Integer getBytesSeen();
+	public void setBytesSeen(Integer bytesSeen);
+	public Integer getTotalFileBytes();
+	public void setTotalFileBytes(Integer totalFileBytes);
+	public Integer getMissingBytes();
+	public void setMissingBytes(Integer missingBytes);
+	public Integer getOverflowBytes();
+	public void setOverflowBytes(Integer overflowBytes);
+	public Boolean getTimedOutFlag();
+	public void setTimedOutFlag(Boolean timedOutFlag);
+	public String getParentUid();
+	public void setParentUid(String parentUid);
+	public String getMd5Hash();
+	public void setMd5Hash(String md5Hash);
+	public String getSha1Hash();
+	public void setSha1Hash(String sha1Hash);
+	public String getSha256Hash();
+	public void setSha256Hash(String sha256Hash);
+	public String getExtractedFilename();
+	public void setExtractedFilename(String extractedFilename);
+	public Boolean getExtractedFileCutoffFlag();
+	public void setExtractedFileCutoffFlag(Boolean extractedFileCutoffFlag);
+	public Integer getExtractedFileSize();
+	public void setExtractedFileSize(Integer extractedFileSize);	
+}

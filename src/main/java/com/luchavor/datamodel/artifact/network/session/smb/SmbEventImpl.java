@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class SmbEventImpl extends AbstractSessionEvent implements SmbEvent {
 	// static session event type
 	private SessionEventType sessionEventType = SessionEventType.SMB;
-	private SmbEventType smbEventType;
+	// smb mapping event attributes
 	private String path;
 	private String service;
 	private String nativeFileSystem;
