@@ -10,7 +10,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import com.test.luchavor.datamodel.mitre.ModelType;
+import com.luchavor.datamodel.mitre.ModelType;
 import com.luchavor.neo4japi.persistence.technique.AttackTechniqueRepo;
 import com.luchavor.neo4japi.persistence.technique.DefendTechniqueRepo;
 import com.luchavor.neo4japi.persistence.techniquegroup.AttackTechniqueGroupRepo;

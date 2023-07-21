@@ -1,7 +1,6 @@
 package com.luchavor.datamodel.artifact.network.observation.smbfile;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.UUID;
 
 public interface SmbFile {
@@ -33,9 +32,13 @@ public interface SmbFile {
 	public Integer getResponderPort();
 	public void setResponderPort(Integer responderPort);
 	
-	// actoin
+	// action
 	public String getAction();
 	public void setAction(String action);
+	
+	// path
+	public String getPath();
+	public void setPath(String path);
 	
 	// file name
 	public String getName();
@@ -50,18 +53,18 @@ public interface SmbFile {
 	public void setPreviousName(String previousName);
 	
 	// modified time
-	public LocalTime getModifiedTime();
-	public void setModifiedTime(LocalTime modifiedTime);
+	public LocalDateTime getModifiedTime();
+	public void setModifiedTime(LocalDateTime modifiedTime);
 	
 	// accessed time
-	public LocalTime getAccessedTime();
-	public void setAccessedTime(LocalTime accessedTime);
+	public LocalDateTime getAccessedTime();
+	public void setAccessedTime(LocalDateTime accessedTime);
 	
 	// created time
-	public LocalTime getCreatedTime();
-	public void setCreatedTime(LocalTime createdTime);
+	public LocalDateTime getCreatedTime();
+	public void setCreatedTime(LocalDateTime createdTime);
 	
 	// changed time
-	public LocalTime getChangedTime();
-	public void setChangedTime(LocalTime changedTime);
+	public LocalDateTime getChangedTime();
+	public void setChangedTime(LocalDateTime changedTime);
 }
