@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 
-import com.luchavor.datamodel.artifact.network.session.Session;
-import com.luchavor.datamodel.artifact.network.session.SessionImpl;
 import com.luchavor.datamodel.artifact.network.session.connection.ConnectionTests;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEventTests;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEventTests;

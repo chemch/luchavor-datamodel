@@ -9,8 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.artifact.network.session.ssl.SslEvent;
-import com.luchavor.datamodel.artifact.network.session.ssl.SslEventImpl;
 import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
 
 @SpringBootTest

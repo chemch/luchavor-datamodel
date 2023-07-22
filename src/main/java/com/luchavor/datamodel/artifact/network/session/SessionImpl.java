@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
 
 import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEvent;
@@ -25,27 +27,39 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Node("Session")
 public class SessionImpl implements Session {
 	/* neo4j id */
 	@Id @GeneratedValue 
 	private UUID id;
 	
+	@Relationship(type = "INCLUDES")
 	private Connection connection;
 	
 	// optional session events (defaults to empty list)
+	@Relationship(type = "INCLUDES")
 	private List<DnsEvent> dnsEvents;
+	@Relationship(type = "INCLUDES")
 	private List<HttpEvent> httpEvents;
+	@Relationship(type = "INCLUDES")
 	private List<KerberosEvent> kerberosEvents;
+	@Relationship(type = "INCLUDES")
 	private List<NtlmEvent> ntlmEvents;
+	@Relationship(type = "INCLUDES")
 	private List<SslEvent> sslEvents;
+	@Relationship(type = "INCLUDES")
 	private List<RpcEvent> rpcEvents;
+	@Relationship(type = "INCLUDES")
 	private List<SmbEvent> smbEvents;
 	
 	// artifact state options
+	@Relationship(type = "CAN_BE")
 	private SessionState closedSessionState = new ClosedSessionState();
+	@Relationship(type = "CAN_BE")
 	private SessionState openSessionState = new OpenSessionState();
 	
 	// current session state (initialized to open)
+	@Relationship(type = "IS_CURRENTLY")
 	private SessionState currentSessionState = openSessionState;
 	
 	// session state transition calc

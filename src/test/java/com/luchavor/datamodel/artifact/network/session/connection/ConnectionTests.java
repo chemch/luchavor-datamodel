@@ -6,8 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
-import com.luchavor.datamodel.artifact.network.session.connection.Connection;
-import com.luchavor.datamodel.artifact.network.session.connection.ConnectionImpl;
 import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
 
 @SpringBootTest

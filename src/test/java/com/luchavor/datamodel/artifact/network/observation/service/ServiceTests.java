@@ -6,9 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
-import com.luchavor.datamodel.artifact.network.observation.service.Service;
-import com.luchavor.datamodel.artifact.network.observation.service.ServiceImpl;
-import com.luchavor.datamodel.artifact.network.observation.smbfile.SmbFile;
 import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
 
 @SpringBootTest

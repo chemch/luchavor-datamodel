@@ -4,6 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
 
 import com.luchavor.datamodel.artifact.state.ArtifactState;
 import com.luchavor.datamodel.artifact.state.CompleteArtifactState;
@@ -17,6 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Node("Artifact")
 public class ArtifactImpl<A> implements Artifact<A> {
 	/* neo4j id */
 	@Id @GeneratedValue 
@@ -25,14 +28,19 @@ public class ArtifactImpl<A> implements Artifact<A> {
 	// artifact attributes
 	private ArtifactType artifactType;
 	private ArtifactSubType artifactSubType;
+	@Relationship(type = "IS_A")
 	private A value;
 	
 	// artifact state options
+	@Relationship(type = "CAN_BE")
 	private ArtifactState completeArtifactState = new CompleteArtifactState<>();
+	@Relationship(type = "CAN_BE")
 	private ArtifactState partialArtifactState = new PartialArtifactState<>();
+	@Relationship(type = "CAN_BE")
 	private ArtifactState emptyArtifactState = new EmptyArtifactState<>();
 	
 	// current artifact state (initialized to empty)
+	@Relationship(type = "IS_CURRENTLY")
 	private ArtifactState currentArtifactState = emptyArtifactState;
 	
 	// artifact state transition calc

@@ -7,10 +7,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.artifact.Artifact;
-import com.luchavor.datamodel.artifact.ArtifactImpl;
-import com.luchavor.datamodel.artifact.ArtifactSubType;
-import com.luchavor.datamodel.artifact.ArtifactType;
 import com.luchavor.datamodel.artifact.network.observation.executable.Executable;
 import com.luchavor.datamodel.artifact.network.observation.executable.ExecutableTests;
 import com.luchavor.datamodel.artifact.network.observation.file.File;
@@ -21,6 +17,8 @@ import com.luchavor.datamodel.artifact.network.observation.service.Service;
 import com.luchavor.datamodel.artifact.network.observation.service.ServiceTests;
 import com.luchavor.datamodel.artifact.network.observation.smbfile.SmbFile;
 import com.luchavor.datamodel.artifact.network.observation.smbfile.SmbFileTests;
+import com.luchavor.datamodel.artifact.network.observation.software.Software;
+import com.luchavor.datamodel.artifact.network.observation.software.SoftwareTests;
 import com.luchavor.datamodel.artifact.network.session.Session;
 import com.luchavor.datamodel.artifact.network.session.SessionTests;
 
@@ -34,6 +32,7 @@ public class ArtifactTests {
 	private ExecutableTests executableTests = new ExecutableTests();
 	private FileTests fileTests = new FileTests();
 	private SmbFileTests smbFileTests = new SmbFileTests();
+	private SoftwareTests softwareTests = new SoftwareTests();
 	
 	public Artifact<Session> getArtifact1() {
 		// test object
@@ -186,6 +185,19 @@ public class ArtifactTests {
 		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
 		// set artifact value
 		SmbFile observation = smbFileTests.getSmbFile1();
+		artifact.setValue(observation);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Software> getArtifact13() {
+		// test object
+		Artifact<Software> artifact = new ArtifactImpl<Software>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
+		// set artifact value
+		Software observation = softwareTests.getSoftware1();
 		artifact.setValue(observation);
 		// return value
 		return artifact;

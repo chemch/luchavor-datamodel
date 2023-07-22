@@ -1,6 +1,7 @@
 package com.luchavor.datamodel.artifact.network.session.connection;
 
 import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Property;
 
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 import com.luchavor.datamodel.artifact.network.session.event.AbstractSessionEvent;
@@ -18,6 +19,7 @@ import lombok.NoArgsConstructor;
 public class ConnectionImpl extends AbstractSessionEvent implements Connection {
 	// static session event type
 	private SessionEventType sessionEventType = SessionEventType.CONNECTION;
+	@Property("Service")
 	private String service;
 	private Double duration;
 	private Integer originatorPayloadByteCount;

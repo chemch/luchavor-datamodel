@@ -9,8 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.artifact.network.session.ntlm.NtlmEvent;
-import com.luchavor.datamodel.artifact.network.session.ntlm.NtlmEventImpl;
 import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
 
 @SpringBootTest
