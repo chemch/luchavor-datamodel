@@ -4,12 +4,14 @@ import java.util.UUID;
 
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
 
 import com.luchavor.datamodel.artifact.Artifact;
 
 import lombok.Data;
 
 @Data
+@Node("EmptyArtifactState")
 public class EmptyArtifactState<A> implements ArtifactState {
 	/* neo4j id */
 	@Id @GeneratedValue 

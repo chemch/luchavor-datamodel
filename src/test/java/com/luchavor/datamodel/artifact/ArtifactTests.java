@@ -7,6 +7,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
+import com.luchavor.datamodel.artifact.network.observation.certificate.Certificate;
+import com.luchavor.datamodel.artifact.network.observation.certificate.CertificateTests;
 import com.luchavor.datamodel.artifact.network.observation.executable.Executable;
 import com.luchavor.datamodel.artifact.network.observation.executable.ExecutableTests;
 import com.luchavor.datamodel.artifact.network.observation.file.File;
@@ -33,6 +35,7 @@ public class ArtifactTests {
 	private FileTests fileTests = new FileTests();
 	private SmbFileTests smbFileTests = new SmbFileTests();
 	private SoftwareTests softwareTests = new SoftwareTests();
+	private CertificateTests certificateTests = new CertificateTests();
 	
 	public Artifact<Session> getArtifact1() {
 		// test object
@@ -199,6 +202,32 @@ public class ArtifactTests {
 		// set artifact value
 		Software observation = softwareTests.getSoftware1();
 		artifact.setValue(observation);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Certificate> getArtifact14() {
+		// test object
+		Artifact<Certificate> artifact = new ArtifactImpl<Certificate>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
+		// set artifact value
+		Certificate observation = certificateTests.getCertificate1();
+		artifact.setValue(observation);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Session> getArtifact15() {
+		// test object
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		Session session = sessionTests.getSession8();
+		artifact.setValue(session);
 		// return value
 		return artifact;
 	}

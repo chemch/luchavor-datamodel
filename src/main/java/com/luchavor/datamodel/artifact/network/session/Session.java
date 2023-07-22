@@ -3,6 +3,7 @@ package com.luchavor.datamodel.artifact.network.session;
 import java.util.List;
 import java.util.UUID;
 
+import com.luchavor.datamodel.artifact.network.session.anomoly.AnomalyEvent;
 import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEvent;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEvent;
@@ -49,6 +50,10 @@ public interface Session {
 	// ntlm events
 	public List<NtlmEvent> getNtlmEvents();
 	public void setNtlmEvents(List<NtlmEvent> ntlmEvents);
+	
+	// anomaly events
+	public List<AnomalyEvent> getAnomalyEvents();
+	public void setAnomalyEvents(List<AnomalyEvent> anomalyEvents);
 	
 	// current session state
 	public SessionState getCurrentSessionState();

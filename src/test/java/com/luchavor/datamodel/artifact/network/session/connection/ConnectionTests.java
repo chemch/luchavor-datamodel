@@ -249,6 +249,40 @@ public class ConnectionTests {
 		return(connection);
 	}
 	
+	public Connection getTestConnection8() {
+		// test connection object
+		Connection connection = new ConnectionImpl();
+		// populate connection
+		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690042947.719));
+		connection.setUid("CqtsDY2fXL2T0z5iX2");
+		connection.setOriginatorIp("192.168.2.137");
+		connection.setOriginatorPort(38410);
+		connection.setResponderIp("192.168.88.30");
+		connection.setResponderPort(5001);
+		connection.setNetworkProtocolType(NetworkProtocolType.TCP);
+		connection.setService("http");
+		connection.setDuration(.000032);
+		connection.setOriginatorPayloadByteCount(22);
+		connection.setResponderPayloadByteCount(0);
+		connection.setConnectionState("SF");
+		connection.setLocalOriginatorFlag(true);
+		connection.setLocalResponderFlag(true);
+		connection.setMissedByteCount(0);
+		connection.setStateHistory("ShADfFa");
+		connection.setOriginatorPacketCount(4);
+		connection.setOriginatorTotalByteCount(202);
+		connection.setResponderPacketCount(3);
+		connection.setResponderTotalByteCount(124);
+		connection.setParentTunnelUid(null);
+		connection.setVlan(null);
+		connection.setInnerVlan(null);
+		connection.setOriginatorMacAddress("00:07:7c:1a:61:83");
+		connection.setResponderMacAddress("00:1c:06:01:d4:23");
+		connection.setSpeculativeService(null);
+		// return value
+		return(connection);
+	}
+	
 	@Test
     void shouldNotBeNull() throws Exception {
 		Connection connection1 = getTestConnection1();

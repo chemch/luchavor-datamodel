@@ -8,6 +8,7 @@ import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
+import com.luchavor.datamodel.artifact.network.session.anomoly.AnomalyEvent;
 import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEvent;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEvent;
@@ -51,6 +52,8 @@ public class SessionImpl implements Session {
 	private List<RpcEvent> rpcEvents;
 	@Relationship(type = "INCLUDES")
 	private List<SmbEvent> smbEvents;
+	@Relationship(type = "INCLUDES")
+	private List<AnomalyEvent> anomalyEvents;
 	
 	// artifact state options
 	@Relationship(type = "CAN_BE")

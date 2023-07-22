@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 
+import com.luchavor.datamodel.artifact.network.session.anomaly.AnomalyEventTests;
 import com.luchavor.datamodel.artifact.network.session.connection.ConnectionTests;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEventTests;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEventTests;
@@ -22,6 +23,7 @@ public class SessionTests {
 	private RpcEventTests rpcEventTests = new RpcEventTests();
 	private SslEventTests sslEventTests = new SslEventTests();
 	private SmbEventTests smbEventTests = new SmbEventTests();
+	private AnomalyEventTests anomalyEventTests = new AnomalyEventTests();
 	
 	public Session getSession1() {
 		// test object
@@ -89,6 +91,16 @@ public class SessionTests {
 		// populate attributes
 		session.setConnection(connectionTests.getTestConnection7());
 		session.setSmbEvents(smbEventTests.getSmbEventList1());
+		// return value
+		return session;
+	}
+	
+	public Session getSession8() {
+		// test object
+		Session session = new SessionImpl();
+		// populate attributes
+		session.setConnection(connectionTests.getTestConnection8());
+		session.setAnomalyEvents(anomalyEventTests.getAnomalyEventList1());
 		// return value
 		return session;
 	}
