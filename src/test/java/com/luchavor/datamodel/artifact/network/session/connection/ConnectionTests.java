@@ -283,6 +283,40 @@ public class ConnectionTests {
 		return(connection);
 	}
 	
+	public Connection getTestConnection9() {
+		// test connection object
+		Connection connection = new ConnectionImpl();
+		// populate connection
+		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690042948.71936));
+		connection.setUid("CoWJh84cqPEHQjFhi8");
+		connection.setOriginatorIp("192.168.2.44");
+		connection.setOriginatorPort(58606);
+		connection.setResponderIp("192.168.88.61");
+		connection.setResponderPort(502);
+		connection.setNetworkProtocolType(NetworkProtocolType.TCP);
+		connection.setService("modbus");
+		connection.setDuration(.000158);
+		connection.setOriginatorPayloadByteCount(11);
+		connection.setResponderPayloadByteCount(9);
+		connection.setConnectionState("SF");
+		connection.setLocalOriginatorFlag(true);
+		connection.setLocalResponderFlag(true);
+		connection.setMissedByteCount(0);
+		connection.setStateHistory("ShADdFaf");
+		connection.setOriginatorPacketCount(7);
+		connection.setOriginatorTotalByteCount(387);
+		connection.setResponderPacketCount(4);
+		connection.setResponderTotalByteCount(225);
+		connection.setParentTunnelUid(null);
+		connection.setVlan(null);
+		connection.setInnerVlan(null);
+		connection.setOriginatorMacAddress("00:07:7c:1a:61:83");
+		connection.setResponderMacAddress("00:90:e8:27:8c:37");
+		connection.setSpeculativeService(null);
+		// return value
+		return(connection);
+	}
+	
 	@Test
     void shouldNotBeNull() throws Exception {
 		Connection connection1 = getTestConnection1();

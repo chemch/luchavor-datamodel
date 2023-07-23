@@ -13,6 +13,7 @@ import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEvent;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEvent;
 import com.luchavor.datamodel.artifact.network.session.kerberos.KerberosEvent;
+import com.luchavor.datamodel.artifact.network.session.modbus.ModbusEvent;
 import com.luchavor.datamodel.artifact.network.session.ntlm.NtlmEvent;
 import com.luchavor.datamodel.artifact.network.session.rpc.RpcEvent;
 import com.luchavor.datamodel.artifact.network.session.smb.SmbEvent;
@@ -54,6 +55,8 @@ public class SessionImpl implements Session {
 	private List<SmbEvent> smbEvents;
 	@Relationship(type = "INCLUDES")
 	private List<AnomalyEvent> anomalyEvents;
+	@Relationship(type = "INCLUDES")
+	private List<ModbusEvent> modbusEvents;
 	
 	// artifact state options
 	@Relationship(type = "CAN_BE")

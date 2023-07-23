@@ -232,6 +232,19 @@ public class ArtifactTests {
 		return artifact;
 	}
 	
+	public Artifact<Session> getArtifact16() {
+		// test object
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		Session session = sessionTests.getSession9();
+		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
 	@Test
     void shouldNotBeNull() throws Exception {
 		Artifact<?> artifact = getArtifact1();

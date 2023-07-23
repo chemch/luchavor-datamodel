@@ -8,6 +8,7 @@ import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEvent;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEvent;
 import com.luchavor.datamodel.artifact.network.session.kerberos.KerberosEvent;
+import com.luchavor.datamodel.artifact.network.session.modbus.ModbusEvent;
 import com.luchavor.datamodel.artifact.network.session.ntlm.NtlmEvent;
 import com.luchavor.datamodel.artifact.network.session.rpc.RpcEvent;
 import com.luchavor.datamodel.artifact.network.session.smb.SmbEvent;
@@ -54,6 +55,10 @@ public interface Session {
 	// anomaly events
 	public List<AnomalyEvent> getAnomalyEvents();
 	public void setAnomalyEvents(List<AnomalyEvent> anomalyEvents);
+	
+	// modbus events
+	public List<ModbusEvent> getModbusEvents();
+	public void setModbusEvents(List<ModbusEvent> modbusEvents);
 	
 	// current session state
 	public SessionState getCurrentSessionState();
