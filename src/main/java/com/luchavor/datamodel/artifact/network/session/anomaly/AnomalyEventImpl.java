@@ -1,4 +1,4 @@
-package com.luchavor.datamodel.artifact.network.session.anomoly;
+package com.luchavor.datamodel.artifact.network.session.anomaly;
 
 import org.springframework.data.neo4j.core.schema.Node;
 import com.luchavor.datamodel.artifact.network.session.event.AbstractSessionEvent;

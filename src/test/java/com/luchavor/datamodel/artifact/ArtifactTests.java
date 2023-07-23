@@ -9,6 +9,8 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.luchavor.datamodel.artifact.network.observation.certificate.Certificate;
 import com.luchavor.datamodel.artifact.network.observation.certificate.CertificateTests;
+import com.luchavor.datamodel.artifact.network.observation.certificateexchange.CertificateExchange;
+import com.luchavor.datamodel.artifact.network.observation.certificateexchange.CertificateExchangeTests;
 import com.luchavor.datamodel.artifact.network.observation.executable.Executable;
 import com.luchavor.datamodel.artifact.network.observation.executable.ExecutableTests;
 import com.luchavor.datamodel.artifact.network.observation.file.File;
@@ -36,6 +38,7 @@ public class ArtifactTests {
 	private SmbFileTests smbFileTests = new SmbFileTests();
 	private SoftwareTests softwareTests = new SoftwareTests();
 	private CertificateTests certificateTests = new CertificateTests();
+	private CertificateExchangeTests certificateExchangeTests = new CertificateExchangeTests();
 	
 	public Artifact<Session> getArtifact1() {
 		// test object
@@ -241,6 +244,32 @@ public class ArtifactTests {
 		// set artifact value
 		Session session = sessionTests.getSession9();
 		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Session> getArtifact17() {
+		// test object
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		Session session = sessionTests.getSession10();
+		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<CertificateExchange> getArtifact18() {
+		// test object
+		Artifact<CertificateExchange> artifact = new ArtifactImpl<CertificateExchange>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
+		// set artifact value
+		CertificateExchange observation = certificateExchangeTests.getCertificateExchange1();
+		artifact.setValue(observation);
 		// return value
 		return artifact;
 	}

@@ -1,4 +1,4 @@
-package com.luchavor.datamodel.artifact.network.session.anomoly;
+package com.luchavor.datamodel.artifact.network.session.anomaly;
 
 import com.luchavor.datamodel.artifact.network.session.event.SessionEvent;
 import com.luchavor.datamodel.artifact.network.session.event.SessionEventType;

@@ -6,8 +6,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import com.luchavor.datamodel.artifact.network.session.anomoly.AnomalyEvent;
-import com.luchavor.datamodel.artifact.network.session.anomoly.AnomalyEventImpl;
+
 import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
 
 @SpringBootTest
