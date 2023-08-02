@@ -14,6 +14,8 @@ import com.luchavor.datamodel.artifact.network.session.ntlm.NtlmEventTests;
 import com.luchavor.datamodel.artifact.network.session.ntp.NtpEventTests;
 import com.luchavor.datamodel.artifact.network.session.rpc.RpcEventTests;
 import com.luchavor.datamodel.artifact.network.session.smb.SmbEventTests;
+import com.luchavor.datamodel.artifact.network.session.smtp.SmtpEventTests;
+import com.luchavor.datamodel.artifact.network.session.ssh.SshEventTests;
 import com.luchavor.datamodel.artifact.network.session.ssl.SslEventTests;
 
 public class SessionTests {
@@ -28,6 +30,8 @@ public class SessionTests {
 	private AnomalyEventTests anomalyEventTests = new AnomalyEventTests();
 	private ModbusEventTests modbusEventTests = new ModbusEventTests();
 	private NtpEventTests ntpEventTests = new NtpEventTests();
+	private SshEventTests sshEventTests = new SshEventTests();
+	private SmtpEventTests smtpEventTests = new SmtpEventTests();
 	
 	public Session getSession1() {
 		// test object
@@ -125,6 +129,26 @@ public class SessionTests {
 		// populate attributes
 		session.setConnection(connectionTests.getTestConnection10());
 		session.setNtpEvents(ntpEventTests.getNtpEventList1());
+		// return value
+		return session;
+	}
+	
+	public Session getSession11() {
+		// test object
+		Session session = new SessionImpl();
+		// populate attributes
+		session.setConnection(connectionTests.getTestConnection11());
+		session.setSshEvents(sshEventTests.getSshEventList1());
+		// return value
+		return session;
+	}
+	
+	public Session getSession12() {
+		// test object
+		Session session = new SessionImpl();
+		// populate attributes
+		session.setConnection(connectionTests.getTestConnection11());
+		session.setSmtpEvents(smtpEventTests.getSmtpEventList1());
 		// return value
 		return session;
 	}

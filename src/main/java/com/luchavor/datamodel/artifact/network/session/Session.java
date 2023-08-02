@@ -6,6 +6,7 @@ import java.util.UUID;
 import com.luchavor.datamodel.artifact.network.session.anomaly.AnomalyEvent;
 import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 import com.luchavor.datamodel.artifact.network.session.dns.DnsEvent;
+import com.luchavor.datamodel.artifact.network.session.ftp.FtpEvent;
 import com.luchavor.datamodel.artifact.network.session.http.HttpEvent;
 import com.luchavor.datamodel.artifact.network.session.kerberos.KerberosEvent;
 import com.luchavor.datamodel.artifact.network.session.modbus.ModbusEvent;
@@ -13,6 +14,8 @@ import com.luchavor.datamodel.artifact.network.session.ntlm.NtlmEvent;
 import com.luchavor.datamodel.artifact.network.session.ntp.NtpEvent;
 import com.luchavor.datamodel.artifact.network.session.rpc.RpcEvent;
 import com.luchavor.datamodel.artifact.network.session.smb.SmbEvent;
+import com.luchavor.datamodel.artifact.network.session.smtp.SmtpEvent;
+import com.luchavor.datamodel.artifact.network.session.ssh.SshEvent;
 import com.luchavor.datamodel.artifact.network.session.ssl.SslEvent;
 import com.luchavor.datamodel.artifact.network.session.state.SessionState;
 
@@ -64,6 +67,18 @@ public interface Session {
 	// ntp events
 	public List<NtpEvent> getNtpEvents();
 	public void setNtpEvents(List<NtpEvent> ntpEvents);
+	
+	// ssh events
+	public List<SshEvent> getSshEvents();
+	public void setSshEvents(List<SshEvent> sshEvents);
+	
+	// smtp events
+	public List<SmtpEvent> getSmtpEvents();
+	public void setSmtpEvents(List<SmtpEvent> smtpEvents);
+	
+	// Ftp events
+	public List<FtpEvent> getFtpEvents();
+	public void setFtpEvents(List<FtpEvent> ftpEvents);
 	
 	// current session state
 	public SessionState getCurrentSessionState();

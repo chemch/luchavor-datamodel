@@ -351,6 +351,74 @@ public class ConnectionTests {
 		return(connection);
 	}
 	
+	public Connection getTestConnection11() {
+		// test connection object
+		Connection connection = new ConnectionImpl();
+		// populate connection
+		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690078090.43959));
+		connection.setUid("Cix45G4aiWaMWAwDHl");
+		connection.setOriginatorIp("192.168.2.137");
+		connection.setOriginatorPort(51397);
+		connection.setResponderIp("192.168.88.60");
+		connection.setResponderPort(22);
+		connection.setNetworkProtocolType(NetworkProtocolType.TCP);
+		connection.setService(null);
+		connection.setDuration(0.000164);
+		connection.setOriginatorPayloadByteCount(0);
+		connection.setResponderPayloadByteCount(58);
+		connection.setConnectionState("SF");
+		connection.setLocalOriginatorFlag(true);
+		connection.setLocalResponderFlag(true);
+		connection.setMissedByteCount(0);
+		connection.setStateHistory("ShAdfFa");
+		connection.setOriginatorPacketCount(5);
+		connection.setOriginatorTotalByteCount(268);
+		connection.setResponderPacketCount(5);
+		connection.setResponderTotalByteCount(326);
+		connection.setParentTunnelUid(null);
+		connection.setVlan(null);
+		connection.setInnerVlan(null);
+		connection.setOriginatorMacAddress("00:07:7c:1a:61:83");
+		connection.setResponderMacAddress("00:90:e8:26:40:23");
+		connection.setSpeculativeService(null);
+		// return value
+		return(connection);
+	}
+	
+	public Connection getTestConnection12() {
+		// test connection object
+		Connection connection = new ConnectionImpl();
+		// populate connection
+		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690325509.19939));
+		connection.setUid("COcRZA48xSZuGRwaR3");
+		connection.setOriginatorIp("10.10.1.4");
+		connection.setOriginatorPort(1470);
+		connection.setResponderIp("74.53.140.153");
+		connection.setResponderPort(25);
+		connection.setNetworkProtocolType(NetworkProtocolType.TCP);
+		connection.setService("smtp");
+		connection.setDuration(0.000457);
+		connection.setOriginatorPayloadByteCount(14705);
+		connection.setResponderPayloadByteCount(538);
+		connection.setConnectionState("SF");
+		connection.setLocalOriginatorFlag(true);
+		connection.setLocalResponderFlag(false);
+		connection.setMissedByteCount(0);
+		connection.setStateHistory("ShAdDaTFf");
+		connection.setOriginatorPacketCount(28);
+		connection.setOriginatorTotalByteCount(21673);
+		connection.setResponderPacketCount(25);
+		connection.setResponderTotalByteCount(1546);
+		connection.setParentTunnelUid(null);
+		connection.setVlan(null);
+		connection.setInnerVlan(null);
+		connection.setOriginatorMacAddress("00:e0:1c:3c:17:c2");
+		connection.setResponderMacAddress("00:1f:33:d9:81:60");
+		connection.setSpeculativeService(null);
+		// return value
+		return(connection);
+	}
+	
 	@Test
     void shouldNotBeNull() throws Exception {
 		Connection connection1 = getTestConnection1();
