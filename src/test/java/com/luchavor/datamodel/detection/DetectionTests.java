@@ -9,22 +9,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import com.luchavor.datamodel.artifact.Artifact;
-import com.luchavor.datamodel.artifact.ArtifactImpl;
 import com.luchavor.datamodel.artifact.ArtifactTests;
 import com.luchavor.datamodel.artifact.network.session.Session;
-import com.luchavor.datamodel.artifact.network.session.SessionTests;
 import com.luchavor.datamodel.artifact.network.session.ssl.SslEvent;
-import com.luchavor.datamodel.artifact.network.session.ssl.SslEventTests;
-import com.luchavor.datamodel.detection.zeeknotification.ZeekNotification;
-import com.luchavor.datamodel.detection.zeeknotification.ZeekNotificationImpl;
-import com.luchavor.datamodel.detection.zeeknotification.ZeekNotificationTests;
 
 @SpringBootTest
 @ActiveProfiles("test")
 public class DetectionTests {
 	private ArtifactTests artifactTests = new ArtifactTests();
-	private SslEventTests sslEventTests = new SslEventTests();
-	
 	public Detection<SslEvent, SslEvent, SslEvent> getDetection1() {
 		// test artifact object and list
 		List<Artifact<Session>> artifactList = new ArrayList<Artifact<Session>>();

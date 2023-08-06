@@ -6,10 +6,8 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-
 import com.luchavor.datamodel.inference.inferredHost.InferredHost;
 import com.luchavor.datamodel.inference.inferredHost.InferredHostImpl;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
 
 @SpringBootTest
 @ActiveProfiles("test")
