@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("HttpEvent")
 public class HttpEventImpl extends AbstractSessionEvent implements HttpEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.HTTP;
 	private Integer transactionDepth;
 	private String method;

@@ -1,4 +1,4 @@
-package com.luchavor.datamodel.artifact.network.observation.host;
+package com.luchavor.datamodel.artifact.network.observation.observedhost;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -8,8 +8,8 @@ import org.springframework.data.neo4j.core.schema.Node;
 import lombok.Data;
 
 @Data
-@Node("Host")
-public class HostImpl implements Host {
+@Node("ObservedHost")
+public class ObservedHostImpl implements ObservedHost {
 	/* neo4j id */
 	@Id @GeneratedValue 
 	private UUID id;

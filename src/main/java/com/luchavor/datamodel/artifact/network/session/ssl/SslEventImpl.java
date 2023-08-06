@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("SslEvent")
 public class SslEventImpl extends AbstractSessionEvent implements SslEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.SSL;
 	private String version;
 	private String cipher;

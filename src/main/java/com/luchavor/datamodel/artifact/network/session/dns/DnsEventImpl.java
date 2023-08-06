@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("DnsEvent")
 public class DnsEventImpl extends AbstractSessionEvent implements DnsEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.DNS;
 	private Integer transactionId;
 	private Double roundTripTime;

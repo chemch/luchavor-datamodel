@@ -15,8 +15,8 @@ import com.luchavor.datamodel.artifact.network.observation.executable.Executable
 import com.luchavor.datamodel.artifact.network.observation.executable.ExecutableTests;
 import com.luchavor.datamodel.artifact.network.observation.file.File;
 import com.luchavor.datamodel.artifact.network.observation.file.FileTests;
-import com.luchavor.datamodel.artifact.network.observation.host.Host;
-import com.luchavor.datamodel.artifact.network.observation.host.HostTests;
+import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHostTests;
+import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHost;
 import com.luchavor.datamodel.artifact.network.observation.service.Service;
 import com.luchavor.datamodel.artifact.network.observation.service.ServiceTests;
 import com.luchavor.datamodel.artifact.network.observation.smbfile.SmbFile;
@@ -31,7 +31,7 @@ import com.luchavor.datamodel.artifact.network.session.SessionTests;
 @ActiveProfiles("test")
 public class ArtifactTests {
 	private SessionTests sessionTests = new SessionTests();
-	private HostTests hostTests = new HostTests();
+	private ObservedHostTests observedHostTests = new ObservedHostTests();
 	private ServiceTests serviceTests = new ServiceTests();
 	private ExecutableTests executableTests = new ExecutableTests();
 	private FileTests fileTests = new FileTests();
@@ -105,15 +105,15 @@ public class ArtifactTests {
 		return artifact;
 	}
 	
-	public Artifact<Host> getArtifact6() {
+	public Artifact<ObservedHost> getArtifact6() {
 		// test object
-		Artifact<Host> artifact = new ArtifactImpl<Host>();
+		Artifact<ObservedHost> artifact = new ArtifactImpl<ObservedHost>();
 		// populate general attributes
 		artifact.setArtifactType(ArtifactType.NETWORK);
 		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
 		// set artifact value
-		Host host = hostTests.getHost1();
-		artifact.setValue(host);
+		ObservedHost observedHost = observedHostTests.getHost1();
+		artifact.setValue(observedHost);
 		// return value
 		return artifact;
 	}
@@ -295,6 +295,19 @@ public class ArtifactTests {
 		artifact.setArtifactSubType(ArtifactSubType.SESSION);
 		// set artifact value
 		Session session = sessionTests.getSession12();
+		artifact.setValue(session);
+		// return value
+		return artifact;
+	}
+	
+	public Artifact<Session> getArtifact21() {
+		// test object
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		Session session = sessionTests.getSession13();
 		artifact.setValue(session);
 		// return value
 		return artifact;

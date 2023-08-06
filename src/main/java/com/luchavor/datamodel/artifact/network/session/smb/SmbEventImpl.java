@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("SmbEvent")
 public class SmbEventImpl extends AbstractSessionEvent implements SmbEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.SMB;
 	// smb mapping event attributes
 	private String path;

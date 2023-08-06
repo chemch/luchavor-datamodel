@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("Connection")
 public class ConnectionImpl extends AbstractSessionEvent implements Connection {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.CONNECTION;
 	@Property("Service")
 	private String service;

@@ -1,5 +1,8 @@
 package com.luchavor.datamodel.detection;
 
 public enum DetectionType {
-	BEHAVIOR, SIGNATURE
+	// basic detection types
+	BEHAVIOR, SIGNATURE,
+	// unknown detection type
+	NONE
 }

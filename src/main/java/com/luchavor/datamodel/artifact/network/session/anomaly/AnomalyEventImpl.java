@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("AnomalyEvent")
 public class AnomalyEventImpl extends AbstractSessionEvent implements AnomalyEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.ANOMALY;
 	// event attributes
 	private String name;

@@ -80,11 +80,11 @@ public interface Session {
 	public List<FtpEvent> getFtpEvents();
 	public void setFtpEvents(List<FtpEvent> ftpEvents);
 	
-	// current session state
+	// current detection state
 	public SessionState getCurrentSessionState();
 	public void setCurrentSessionState(SessionState sessionState);
 	
-	// session state options
+	// state options
 	public SessionState getClosedSessionState();
 	public SessionState getOpenSessionState();
 }

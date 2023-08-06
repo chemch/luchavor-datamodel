@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("FtpEvent")
 public class FtpEventImpl extends AbstractSessionEvent implements FtpEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.FTP;
 	private String user;
 	private String password;

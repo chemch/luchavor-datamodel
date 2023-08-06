@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("RpcEvent")
 public class RpcEventImpl extends AbstractSessionEvent implements RpcEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.RPC;
 	private Double roundTripTime;
 	private String namedPipe;

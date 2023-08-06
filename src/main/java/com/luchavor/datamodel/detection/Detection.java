@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.luchavor.datamodel.artifact.Artifact;
+import com.luchavor.datamodel.detection.state.DetectionState;
 import com.luchavor.datamodel.inference.Inference;
 
 public interface Detection<D, I, A> {
@@ -26,4 +27,12 @@ public interface Detection<D, I, A> {
 	// based artifact(s)
 	public List<Artifact<A>> getArtifacts();
 	public void setArtifacts(List<Artifact<A>> artifacts);
+	
+	// current detection state
+	public DetectionState getCurrentDetectionState();
+	public void setCurrentDetectionState(DetectionState detectionState);
+	
+	// detection state options
+	public DetectionState getClosedDetectionState();
+	public DetectionState getOpenDetectionState();
 }

@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("NtpEvent")
 public class NtpEventImpl extends AbstractSessionEvent implements NtpEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.NTP;
 	private Integer version;
 	private Integer mode;

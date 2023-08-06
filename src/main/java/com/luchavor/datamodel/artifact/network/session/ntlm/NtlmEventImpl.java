@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("NtlmEvent")
 public class NtlmEventImpl extends AbstractSessionEvent implements NtlmEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.NTLM;
 	private String username;
 	private String hostname;

@@ -18,8 +18,8 @@ public class OpenSessionState implements SessionState {
 	
 	Session session;
 	
-	// session transition calc
-	public void calcualteSessionState() {
+	// transition calc
+	public void calculateSessionState() {
 		session.setCurrentSessionState(session.getOpenSessionState());
 	}
 }

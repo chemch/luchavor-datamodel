@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("ModbusEvent")
 public class ModbusEventImpl extends AbstractSessionEvent implements ModbusEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.MODBUS;
 	private String function;
 	private String exception;

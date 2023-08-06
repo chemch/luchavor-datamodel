@@ -8,7 +8,7 @@ public interface SessionEvent {
 	public UUID getId();
 	public void setId(UUID uuid);
 	
-	// session event type (enum)
+	// event type (enum)
 	public SessionEventType getSessionEventType();
 	public void setSessionEventType(SessionEventType type);
 	

@@ -147,8 +147,17 @@ public class SessionTests {
 		// test object
 		Session session = new SessionImpl();
 		// populate attributes
-		session.setConnection(connectionTests.getTestConnection11());
+		session.setConnection(connectionTests.getTestConnection12());
 		session.setSmtpEvents(smtpEventTests.getSmtpEventList1());
+		// return value
+		return session;
+	}
+	
+	public Session getSession13() {
+		// test object
+		Session session = new SessionImpl();
+		// populate attributes
+		session.setConnection(connectionTests.getTestConnection13());
 		// return value
 		return session;
 	}

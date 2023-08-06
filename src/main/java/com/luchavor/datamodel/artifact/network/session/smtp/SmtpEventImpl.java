@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("SmtpEvent")
 public class SmtpEventImpl extends AbstractSessionEvent implements SmtpEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.SMTP;
 	private Integer transactionDepth;
 	private String helo;

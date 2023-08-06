@@ -42,7 +42,7 @@ public class SessionImpl implements Session {
 	@Relationship(type = "INCLUDES")
 	private Connection connection;
 	
-	// optional session events (defaults to empty list)
+	// optional detection events (defaults to empty list)
 	@Relationship(type = "INCLUDES")
 	private List<DnsEvent> dnsEvents;
 	@Relationship(type = "INCLUDES")
@@ -76,12 +76,12 @@ public class SessionImpl implements Session {
 	@Relationship(type = "CAN_BE")
 	private SessionState openSessionState = new OpenSessionState();
 	
-	// current session state (initialized to open)
+	// current state (initialized to open)
 	@Relationship(type = "IS_CURRENTLY")
 	private SessionState currentSessionState = openSessionState;
 	
-	// session state transition calc
+	// state transition calc
 	public void calculateSessionState() {
-		currentSessionState.calcualteSessionState();
+		currentSessionState.calculateSessionState();
 	}
 }

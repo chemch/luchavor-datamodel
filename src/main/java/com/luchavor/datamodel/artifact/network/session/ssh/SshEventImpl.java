@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 @Node("SshEvent")
 public class SshEventImpl extends AbstractSessionEvent implements SshEvent {
-	// static session event type
+	// static event type
 	private SessionEventType sessionEventType = SessionEventType.SSH;
 	private Integer version;
 	private Boolean authenticationSuccessFlag;
