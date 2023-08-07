@@ -17,14 +17,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Node("Inference")
-public class InferenceImpl<I, A> implements Inference<I, A> {
+public class InferenceImpl<I> implements Inference<I> {
 	/* neo4j id */
 	@Id @GeneratedValue 
 	private UUID id;
 	
 	private InferenceType inferenceType;
-	private I valup;
+	private I value;
 	
 	// composite attribute components
-	private List<Artifact<A>> artifacts;
+	private List<Artifact<?>> artifacts;
 }

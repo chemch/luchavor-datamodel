@@ -5,7 +5,7 @@ import java.util.UUID;
 
 import com.luchavor.datamodel.artifact.Artifact;
 
-public interface Inference<I, A> {
+public interface Inference<I> {
 	// neo4j id
 	public UUID getId();
 	public void setId(UUID uuid);
@@ -15,10 +15,10 @@ public interface Inference<I, A> {
 	public void setInferenceType(InferenceType inferenceType);
 	
 	// varying inference type
-	public I getValup();
-	public void setValup(I value);
+	public I getValue();
+	public void setValue(I value);
 	
 	// based artifact(s)
-	public List<Artifact<A>> getArtifacts();
-	public void setArtifacts(List<Artifact<A>> artifacts);
+	public List<Artifact<?>> getArtifacts();
+	public void setArtifacts(List<Artifact<?>> artifacts);
 }

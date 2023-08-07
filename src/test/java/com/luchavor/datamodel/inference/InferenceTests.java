@@ -24,28 +24,27 @@ import com.luchavor.datamodel.inference.inferredhost.InferredHostTests;
 public class InferenceTests {
 	private InferredHostTests inferredHostTests = new InferredHostTests();
 	private ArtifactTests artifactTests = new ArtifactTests();
-	private SessionTests sessionTests = new SessionTests();
 	
-	public Inference<Artifact<Session>, Session> getInference1() {
+	public Inference<InferredHost> getInference1() {
 		// test object
-		Inference<Artifact<Session>, Session> rv = new InferenceImpl<Artifact<Session>, Session>();
+		Inference<InferredHost> rv = new InferenceImpl<InferredHost>();
 		// populate general attributes
 		rv.setInferenceType(InferenceType.DIRECT);
 		// set artifact list value
-		List<Artifact<Session>> artifactList = new ArrayList<>();
+		List<Artifact<?>> artifactList = new ArrayList<>();
 		artifactList.add(artifactTests.getArtifact1());
 		rv.setArtifacts(artifactList);
 		// set inference value
-		
-		rv.setValup(artifactTests.getArtifact1());
+		InferredHost inferredHost = inferredHostTests.getInferredHost1();
+		rv.setValue(inferredHost);
 		// return value
 		return rv;
 	}
 	
 	@Test
     void shouldNotBeNull() throws Exception {
-		Inference<?, ?> artifact = getInference1();
+		Inference<?> inference = getInference1();
 		// confirm object is not null
-		assertNotNull(artifact);
+		assertNotNull(inference);
 	}
 }
