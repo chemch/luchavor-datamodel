@@ -27,7 +27,6 @@ import com.luchavor.datamodel.artifact.network.session.Session;
 import com.luchavor.datamodel.artifact.network.session.SessionTests;
 
 @SpringBootTest
-@AutoConfigureMockMvc
 @ActiveProfiles("test")
 public class ArtifactTests {
 	private SessionTests sessionTests = new SessionTests();

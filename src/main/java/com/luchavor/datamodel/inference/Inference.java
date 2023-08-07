@@ -15,8 +15,8 @@ public interface Inference<I, A> {
 	public void setInferenceType(InferenceType inferenceType);
 	
 	// varying inference type
-	public I getValue();
-	public void setValue(I value);
+	public I getValup();
+	public void setValup(I value);
 	
 	// based artifact(s)
 	public List<Artifact<A>> getArtifacts();
