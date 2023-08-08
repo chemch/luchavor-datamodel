@@ -3,10 +3,8 @@ package com.luchavor.datamodel.artifact;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-
 import com.luchavor.datamodel.artifact.network.observation.certificate.Certificate;
 import com.luchavor.datamodel.artifact.network.observation.certificate.CertificateTests;
 import com.luchavor.datamodel.artifact.network.observation.certificateexchange.CertificateExchange;
