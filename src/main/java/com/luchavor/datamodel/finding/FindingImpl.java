@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
 import com.luchavor.datamodel.artifact.Artifact;
@@ -22,6 +23,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Node("Finding")
 public class FindingImpl<F> implements Finding<F> {
 	/* neo4j id */
 	@Id @GeneratedValue 
@@ -40,11 +42,15 @@ public class FindingImpl<F> implements Finding<F> {
 	private List<Artifact<?>> artifacts;
 	
 	// finding state options
-	private FindingState confirmedFindingState = new ConfirmedFindingState<>();
-	private FindingState potentialFindingState = new PotentialFindingState<>();
-	private FindingState refutedFindingState = new RefutedFindingState<>();
+	@Relationship(type = "CAN_BE")
+	private FindingState confirmedFindingState = new ConfirmedFindingState();
+	@Relationship(type = "CAN_BE")
+	private FindingState potentialFindingState = new PotentialFindingState();
+	@Relationship(type = "CAN_BE")
+	private FindingState refutedFindingState = new RefutedFindingState();
 		
 	// current finding state (initialized to potential)
+	@Relationship(type = "IS_CURRENTLY")
 	private FindingState currentFindingState = potentialFindingState;
 		
 	// finding state transition calc

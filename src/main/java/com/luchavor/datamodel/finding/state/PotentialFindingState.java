@@ -1,11 +1,22 @@
 package com.luchavor.datamodel.finding.state;
 
+import java.util.UUID;
+
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+
 import com.luchavor.datamodel.finding.Finding;
 import lombok.Data;
 
 @Data
-public class PotentialFindingState<F> implements FindingState {
-	Finding<F> finding;
+@Node("PotentialFindingState")
+public class PotentialFindingState implements FindingState {
+	/* neo4j id */
+	@Id @GeneratedValue 
+	private UUID id;
+	
+	Finding<?> finding;
 	
 	// finding transition calc
 	public void calculateFindingState() {
