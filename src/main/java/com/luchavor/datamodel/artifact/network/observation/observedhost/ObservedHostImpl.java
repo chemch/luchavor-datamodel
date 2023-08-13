@@ -5,6 +5,9 @@ import java.util.UUID;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Data
@@ -14,6 +17,8 @@ public class ObservedHostImpl implements ObservedHost {
 	@Id @GeneratedValue 
 	private UUID id;
 	// observation attributes
+	@JsonProperty("ts")
 	private LocalDateTime timestamp;
+	@JsonProperty("host")
 	private String hostIp;
 }
