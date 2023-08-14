@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TestArtifact {
-	@JsonProperty("testName")
+	@JsonProperty("name")
 	private String name;
 }
