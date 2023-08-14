@@ -8,9 +8,13 @@ import org.springframework.data.neo4j.core.schema.Node;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Node("ObservedHost")
 public class ObservedHostImpl implements ObservedHost {
 	/* neo4j id */
