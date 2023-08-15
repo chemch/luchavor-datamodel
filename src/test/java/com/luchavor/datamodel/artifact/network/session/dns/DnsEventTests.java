@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -18,7 +18,7 @@ public class DnsEventTests {
 		// test dns object
 		DnsEvent event = new DnsEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689560080.32542));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689560080.32542));
 		event.setUid("Cn4DGr4nzlVfRjIZe7");
 		event.setOriginatorIp("172.23.250.132");
 		event.setOriginatorPort(36651);

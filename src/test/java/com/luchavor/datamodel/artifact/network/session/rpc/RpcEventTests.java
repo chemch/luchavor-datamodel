@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -20,7 +20,7 @@ public class RpcEventTests {
 		// test object
 		RpcEvent event = new RpcEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689721214.20644));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689721214.20644));
 		event.setUid("CLvWgY387H4Byeno68");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49532);

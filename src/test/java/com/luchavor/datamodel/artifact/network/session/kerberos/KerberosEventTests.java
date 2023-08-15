@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -20,7 +20,7 @@ public class KerberosEventTests {
 		// test object
 		KerberosEvent event = new KerberosEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689646377.46308));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689646377.46308));
 		event.setUid("C8YskB4y2XSn9o9KF7");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49533);
@@ -32,7 +32,7 @@ public class KerberosEventTests {
 		event.setSuccessFlag(true);
 		event.setErrorMessage(null);
 		event.setFrom(null);
-		event.setTill(AttributeTypeTransformer.convertLongEpochTimestamp((long) 2136422885));
+		event.setTill(FieldTypeConverter.convertLongEpochTimestamp((long) 2136422885));
 		event.setCipher("aes256-cts-hmac-sha1-96");
 		event.setForwardableFlag(true);
 		event.setRenewableFlag(true);

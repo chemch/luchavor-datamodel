@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -14,7 +15,7 @@ public class SoftwareTests {
 		// test object
 		Software observation = new SoftwareImpl();
 		// populate object
-		observation.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689901417.36315));
+		observation.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689901417.36315));
 		observation.setHostIp("172.23.250.132");
 		observation.setType("HTTP::BROWSER");
 		observation.setName("Debian APT-HTTP");

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -15,10 +15,10 @@ public class ExecutableTests {
 		// test object
 		Executable executable = new ExecutableImpl();
 		// populate object
-		executable.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1375293001.58677));
+		executable.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1375293001.58677));
 		executable.setUid("Fjmi0s24VCZQAR8xrj");
 		executable.setCompileArchitecture("I386");
-		executable.setCompileTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1390123581.0));
+		executable.setCompileTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1390123581.0));
 		executable.setOperatingSystem("unknown-13.6");
 		executable.setSubSystem("WINDOWS_GUI");
 		executable.setExecutableFlag(true);

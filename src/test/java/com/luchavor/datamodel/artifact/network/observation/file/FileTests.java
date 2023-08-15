@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -14,7 +15,7 @@ public class FileTests {
 		// test object
 		File file = new FileImpl();
 		// populate object
-		file.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1375292987.31677));
+		file.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1375292987.31677));
 		file.setUid("FHmtE03rjmRKqx1gsg");
 		file.setTransmitHosts("188.120.236.219");
 		file.setReceiveHosts("192.168.204.150");

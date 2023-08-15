@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -20,7 +20,7 @@ public class ModbusEventTests {
 		// test object
 		ModbusEvent event = new ModbusEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690042948.71936));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690042948.71936));
 		event.setUid("CoWJh84cqPEHQjFhi8");
 		event.setOriginatorIp("192.168.2.44");
 		event.setOriginatorPort(58606);

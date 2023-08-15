@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -18,7 +18,7 @@ public class AnomalyEventTests {
 		// test object
 		AnomalyEvent event = new AnomalyEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690042947.719));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690042947.719));
 		event.setUid("CqtsDY2fXL2T0z5iX2");
 		event.setOriginatorIp("192.168.2.137");
 		event.setOriginatorPort(38410);

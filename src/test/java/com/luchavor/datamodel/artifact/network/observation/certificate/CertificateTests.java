@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -15,7 +15,7 @@ public class CertificateTests {
 		// test object
 		Certificate certificate = new CertificateImpl();
 		// populate object
-		certificate.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689904487.80656));
+		certificate.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689904487.80656));
 		certificate.setHostIp("192.168.88.60");
 		certificate.setPort(443);
 		certificate.setSubject("L=Taipei,SN=Taiwan,C=TW,OU=IEI,O=Moxa Networking Co.\\, Ltd.,CN=192.168.88.60");

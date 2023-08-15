@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -15,7 +15,7 @@ public class ServiceTests {
 		// test object
 		Service service = new ServiceImpl();
 		// populate object
-		service.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689560080.32542));
+		service.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689560080.32542));
 		service.setHostIp("10.0.0.158");
 		service.setNetworkProtocolType(NetworkProtocolType.UDP);
 		service.setPort(53);

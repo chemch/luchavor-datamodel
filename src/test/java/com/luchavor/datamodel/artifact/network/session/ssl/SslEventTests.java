@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -20,7 +20,7 @@ public class SslEventTests {
 		// test object
 		SslEvent event = new SslEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689733348.6635));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689733348.6635));
 		event.setUid("C9Mt4e1b7pjoRIC55k");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49525);

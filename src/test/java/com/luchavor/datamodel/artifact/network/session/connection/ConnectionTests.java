@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -15,7 +15,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689560080.32542));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689560080.32542));
 		connection.setUid("Cn4DGr4nzlVfRjIZe7");
 		connection.setOriginatorIp("172.23.250.132");
 		connection.setOriginatorPort(36651);
@@ -49,7 +49,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689644622.66883));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689644622.66883));
 		connection.setUid("C4iJPc2hxZsJ39nz0f");
 		connection.setOriginatorIp("10.0.0.158");
 		connection.setOriginatorPort(49558);
@@ -83,7 +83,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689646377.46308));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689646377.46308));
 		connection.setUid("C8YskB4y2XSn9o9KF7");
 		connection.setOriginatorIp("10.0.0.158");
 		connection.setOriginatorPort(49533);
@@ -117,7 +117,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689721214.20921));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689721214.20921));
 		connection.setUid("Cy7bMR3IwANa9ZEUb");
 		connection.setOriginatorIp("10.0.0.158");
 		connection.setOriginatorPort(49536);
@@ -151,7 +151,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689721214.20644));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689721214.20644));
 		connection.setUid("CLvWgY387H4Byeno68");
 		connection.setOriginatorIp("10.0.0.158");
 		connection.setOriginatorPort(49532);
@@ -185,7 +185,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689733348.6635));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689733348.6635));
 		connection.setUid("C9Mt4e1b7pjoRIC55k");
 		connection.setOriginatorIp("10.0.0.158");
 		connection.setOriginatorPort(49525);
@@ -219,7 +219,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689819179.07213));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689819179.07213));
 		connection.setUid("CyJElO1nOpPVk0oH6f");
 		connection.setOriginatorIp("10.0.0.158");
 		connection.setOriginatorPort(49524);
@@ -253,7 +253,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690042947.719));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690042947.719));
 		connection.setUid("CqtsDY2fXL2T0z5iX2");
 		connection.setOriginatorIp("192.168.2.137");
 		connection.setOriginatorPort(38410);
@@ -287,7 +287,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690042948.71936));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690042948.71936));
 		connection.setUid("CoWJh84cqPEHQjFhi8");
 		connection.setOriginatorIp("192.168.2.44");
 		connection.setOriginatorPort(58606);
@@ -321,7 +321,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690078090.31059));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690078090.31059));
 		connection.setUid("ClyixZ19R6GZ2iCwKg");
 		connection.setOriginatorIp("192.168.89.2");
 		connection.setOriginatorPort(123);
@@ -355,7 +355,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690078090.43959));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690078090.43959));
 		connection.setUid("Cix45G4aiWaMWAwDHl");
 		connection.setOriginatorIp("192.168.2.137");
 		connection.setOriginatorPort(51397);
@@ -389,7 +389,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690325509.19939));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690325509.19939));
 		connection.setUid("COcRZA48xSZuGRwaR3");
 		connection.setOriginatorIp("10.10.1.4");
 		connection.setOriginatorPort(1470);
@@ -423,7 +423,7 @@ public class ConnectionTests {
 		// test connection object
 		Connection connection = new ConnectionImpl();
 		// populate connection
-		connection.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1691285797.49421));
+		connection.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1691285797.49421));
 		connection.setUid("CVzFFz1ifCByG4iax7");
 		connection.setOriginatorIp("10.3.12.101");
 		connection.setOriginatorPort(49780);

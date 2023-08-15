@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -20,7 +20,7 @@ public class SshEventTests {
 		// test object
 		SshEvent event = new SshEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1690078090.43959));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690078090.43959));
 		event.setUid("Cix45G4aiWaMWAwDHl");
 		event.setOriginatorIp("192.168.2.137");
 		event.setOriginatorPort(51397);

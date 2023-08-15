@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -20,7 +20,7 @@ public class HttpEventTests {
 		// test object
 		HttpEvent event = new HttpEventImpl();
 		// populate object attributes
-		event.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689644622.66883));
+		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689644622.66883));
 		event.setUid("C4iJPc2hxZsJ39nz0f");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49558);

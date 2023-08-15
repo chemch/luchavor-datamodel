@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -21,7 +21,7 @@ public class ZeekNotificationTests {
 		// test object
 		ZeekNotification notification = new ZeekNotificationImpl();
 		// populate object attributes
-		notification.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1691285797.49421));
+		notification.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1691285797.49421));
 		notification.setUid("CVzFFz1ifCByG4iax7");
 		notification.setOriginatorIp("10.3.12.101");
 		notification.setOriginatorPort(49780);

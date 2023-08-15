@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -14,7 +15,7 @@ public class SmbFileTests {
 		// test object
 		SmbFile observation = new SmbFileImpl();
 		// populate object
-		observation.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1689214299.92754));
+		observation.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689214299.92754));
 		observation.setUid("Cr6xU22NsYJR7VJSi8");
 		observation.setOriginatorIp("10.0.0.158");
 		observation.setOriginatorPort(49621);
@@ -25,10 +26,10 @@ public class SmbFileTests {
 		observation.setPath("\\\\BACKANDFORTH-DC.backandforth.net\\sysvol");
 		observation.setName("backandforth.net\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\gpt.ini");
 		observation.setSize(22);
-		observation.setModifiedTime(AttributeTypeTransformer.convertDoubleEpochTimestamp(1639069591.2315));
-		observation.setAccessedTime(AttributeTypeTransformer.convertDoubleEpochTimestamp(1639069591.2315));
-		observation.setCreatedTime(AttributeTypeTransformer.convertDoubleEpochTimestamp(1639069258.66145));
-		observation.setChangedTime(AttributeTypeTransformer.convertDoubleEpochTimestamp(1639069591.2315));
+		observation.setModifiedTime(FieldTypeConverter.convertDoubleEpochTimestamp(1639069591.2315));
+		observation.setAccessedTime(FieldTypeConverter.convertDoubleEpochTimestamp(1639069591.2315));
+		observation.setCreatedTime(FieldTypeConverter.convertDoubleEpochTimestamp(1639069258.66145));
+		observation.setChangedTime(FieldTypeConverter.convertDoubleEpochTimestamp(1639069591.2315));
 		// return value
 		return(observation);
 	}

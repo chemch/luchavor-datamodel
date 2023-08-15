@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.luchavor.datamodel.util.transform.attribute.AttributeTypeTransformer;
+import com.luchavor.datamodel.util.FieldTypeConverter;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -15,7 +15,7 @@ public class CertificateExchangeTests {
 		// test object
 		CertificateExchange exchange = new CertificateExchangeImpl();
 		// populate object
-		exchange.setTimestamp(AttributeTypeTransformer.convertDoubleEpochTimestamp(1691336734.0));
+		exchange.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1691336734.0));
 		exchange.setCertificateKeyAlgorithm("rsaEncryption");
 		exchange.setCertificateSigningAlgorithm("sha256WithRSAEncryption");
 		exchange.setCertificateKeyLength(2048);
