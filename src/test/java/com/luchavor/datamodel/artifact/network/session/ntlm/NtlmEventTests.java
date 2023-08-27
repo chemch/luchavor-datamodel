@@ -21,7 +21,7 @@ public class NtlmEventTests {
 		NtlmEvent event = new NtlmEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689721214.20921));
-		event.setUid("Cy7bMR3IwANa9ZEUb");
+		event.setCuid("Cy7bMR3IwANa9ZEUb");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49536);
 		event.setResponderIp("10.0.0.10");

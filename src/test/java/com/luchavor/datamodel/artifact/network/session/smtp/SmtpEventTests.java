@@ -21,7 +21,7 @@ public class SmtpEventTests {
 		SmtpEvent event = new SmtpEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690325509.19939));
-		event.setUid("COcRZA48xSZuGRwaR3");
+		event.setCuid("COcRZA48xSZuGRwaR3");
 		event.setOriginatorIp("10.10.1.4");
 		event.setOriginatorPort(1470);
 		event.setResponderIp("74.53.140.153");

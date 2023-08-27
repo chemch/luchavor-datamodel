@@ -21,7 +21,7 @@ public class KerberosEventTests {
 		KerberosEvent event = new KerberosEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689646377.46308));
-		event.setUid("C8YskB4y2XSn9o9KF7");
+		event.setCuid("C8YskB4y2XSn9o9KF7");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49533);
 		event.setResponderIp("10.0.0.10");

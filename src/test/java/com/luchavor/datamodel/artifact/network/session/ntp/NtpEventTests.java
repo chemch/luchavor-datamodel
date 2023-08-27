@@ -21,7 +21,7 @@ public class NtpEventTests {
 		NtpEvent event = new NtpEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690078090.31059));
-		event.setUid("ClyixZ19R6GZ2iCwKg");
+		event.setCuid("ClyixZ19R6GZ2iCwKg");
 		event.setOriginatorIp("192.168.89.2");
 		event.setOriginatorPort(123);
 		event.setResponderIp("17.253.34.253");

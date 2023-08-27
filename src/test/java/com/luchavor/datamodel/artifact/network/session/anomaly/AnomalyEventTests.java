@@ -19,7 +19,7 @@ public class AnomalyEventTests {
 		AnomalyEvent event = new AnomalyEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690042947.719));
-		event.setUid("CqtsDY2fXL2T0z5iX2");
+		event.setCuid("CqtsDY2fXL2T0z5iX2");
 		event.setOriginatorIp("192.168.2.137");
 		event.setOriginatorPort(38410);
 		event.setResponderIp("192.168.88.30");

@@ -21,7 +21,7 @@ public class RpcEventTests {
 		RpcEvent event = new RpcEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689721214.20644));
-		event.setUid("CLvWgY387H4Byeno68");
+		event.setCuid("CLvWgY387H4Byeno68");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49532);
 		event.setResponderIp("10.0.0.10");

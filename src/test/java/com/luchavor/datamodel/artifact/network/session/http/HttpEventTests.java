@@ -21,7 +21,7 @@ public class HttpEventTests {
 		HttpEvent event = new HttpEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689644622.66883));
-		event.setUid("C4iJPc2hxZsJ39nz0f");
+		event.setCuid("C4iJPc2hxZsJ39nz0f");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49558);
 		event.setResponderIp("91.199.212.52");

@@ -1,28 +1,33 @@
-package com.luchavor.datamodel.artifact.network.observation.file;
+package com.luchavor.datamodel.artifact.network.observation.observedfile;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
-public interface File {
+public interface ObservedFile {
 	public UUID getId();
 	public void setId(UUID id);
 	// observation fields
 	public LocalDateTime getTimestamp();
 	public void setTimestamp(LocalDateTime timestamp);
-	public String getUid();
-	public void setUid(String uid);
-	public String getTransmitHosts();
-	public void setTransmitHosts(String transmitHosts);
-	public String getReceiveHosts();
-	public void setReceiveHosts(String receiveHosts);
-	public String getConnectionUids();
-	public void setConnectionUids(String connectionUids);
+	public String getFuid();
+	public void setFuid(String fuid);
+	public String getOriginatorIp();
+	public void setOriginatorIp(String originatorIp);
+	public String getResponderIp();
+	public void setResponderIp(String responderIp);
+	public Integer getOriginatorPort();
+	public void setOriginatorPort(Integer originatorPort);
+	public Integer getResponderPort();
+	public void setResponderPort(Integer responderPort);
+	public String getCuid();
+	public void setCuid(String cuid);
 	public String getSource();
 	public void setSource(String source);
 	public Integer getDepth();
 	public void setDepth(Integer depth);
-	public String getAnalyzers();
-	public void setAnalyzers(String analyzers);
+	public List<String> getAnalyzers();
+	public void setAnalyzers(List<String> analyzers);
 	public String getMimeType();
 	public void setMimeType(String mimeType);
 	public String getFilename();
@@ -43,8 +48,8 @@ public interface File {
 	public void setOverflowBytes(Integer overflowBytes);
 	public Boolean getTimedOutFlag();
 	public void setTimedOutFlag(Boolean timedOutFlag);
-	public String getParentUid();
-	public void setParentUid(String parentUid);
+	public String getParentFuid();
+	public void setParentFuid(String parentFuid);
 	public String getMd5Hash();
 	public void setMd5Hash(String md5Hash);
 	public String getSha1Hash();

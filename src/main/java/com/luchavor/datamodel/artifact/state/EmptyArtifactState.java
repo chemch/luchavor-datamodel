@@ -21,6 +21,10 @@ public class EmptyArtifactState<A> implements ArtifactState {
 	
 	// artifact transition calc
 	public void calculateArtifactState() {
-		artifact.setCurrentArtifactState(artifact.getEmptyArtifactState());
+		if( artifact.getArtifactType() != null && artifact.getArtifactSubType() != null && artifact.getValue() != null) {
+			artifact.setCurrentArtifactState(artifact.getCompleteArtifactState());
+		} else {
+			artifact.setCurrentArtifactState(artifact.getPartialArtifactState());
+		}
 	}
 }

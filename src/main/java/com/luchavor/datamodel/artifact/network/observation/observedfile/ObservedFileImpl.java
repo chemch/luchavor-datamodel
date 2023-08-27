@@ -1,6 +1,7 @@
-package com.luchavor.datamodel.artifact.network.observation.file;
+package com.luchavor.datamodel.artifact.network.observation.observedfile;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
@@ -8,20 +9,22 @@ import org.springframework.data.neo4j.core.schema.Node;
 import lombok.Data;
 
 @Data
-@Node("File")
-public class FileImpl implements File {
+@Node("ObservedFile")
+public class ObservedFileImpl implements ObservedFile {
 	/* neo4j id */
 	@Id @GeneratedValue 
 	private UUID id;
 	// observation attributes
 	private LocalDateTime timestamp;
-	private String uid;
-	private String transmitHosts;
-	private String receiveHosts;
-	private String connectionUids;
+	private String fuid;
+	private String originatorIp;
+	private String responderIp;
+	private Integer originatorPort;
+	private Integer responderPort;
+	private String cuid;
 	private String source;
 	private Integer depth;
-	private String analyzers;
+	private List<String> analyzers;
 	private String mimeType;
 	private String filename;
 	private Double duration;
@@ -32,7 +35,7 @@ public class FileImpl implements File {
 	private Integer missingBytes;
 	private Integer overflowBytes;
 	private Boolean timedOutFlag;
-	private String parentUid;
+	private String parentFuid;
 	private String md5Hash;
 	private String sha1Hash;
 	private String sha256Hash;

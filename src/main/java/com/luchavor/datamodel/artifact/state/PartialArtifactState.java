@@ -21,6 +21,10 @@ public class PartialArtifactState<A> implements ArtifactState {
 	
 	// artifact transition calc
 	public void calculateArtifactState() {
-		artifact.setCurrentArtifactState(artifact.getPartialArtifactState());
+		if( artifact.getArtifactType() != null && artifact.getArtifactSubType() != null && artifact.getValue() != null) {
+			artifact.setCurrentArtifactState(artifact.getCompleteArtifactState());
+		} else {
+			artifact.setCurrentArtifactState(artifact.getPartialArtifactState());
+		}
 	}
 }

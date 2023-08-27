@@ -21,7 +21,7 @@ public class SslEventTests {
 		SslEvent event = new SslEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689733348.6635));
-		event.setUid("C9Mt4e1b7pjoRIC55k");
+		event.setCuid("C9Mt4e1b7pjoRIC55k");
 		event.setOriginatorIp("10.0.0.158");
 		event.setOriginatorPort(49525);
 		event.setResponderIp("87.120.8.98");

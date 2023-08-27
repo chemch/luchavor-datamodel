@@ -11,8 +11,8 @@ import com.luchavor.datamodel.artifact.network.observation.certificateexchange.C
 import com.luchavor.datamodel.artifact.network.observation.certificateexchange.CertificateExchangeTests;
 import com.luchavor.datamodel.artifact.network.observation.executable.Executable;
 import com.luchavor.datamodel.artifact.network.observation.executable.ExecutableTests;
-import com.luchavor.datamodel.artifact.network.observation.file.File;
 import com.luchavor.datamodel.artifact.network.observation.file.FileTests;
+import com.luchavor.datamodel.artifact.network.observation.observedfile.ObservedFile;
 import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHostTests;
 import com.luchavor.datamodel.artifact.network.observation.observedservice.ObservedService;
 import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHost;
@@ -167,14 +167,14 @@ public class ArtifactTests {
 		return artifact;
 	}
 	
-	public Artifact<File> getArtifact11() {
+	public Artifact<ObservedFile> getArtifact11() {
 		// test object
-		Artifact<File> artifact = new ArtifactImpl<File>();
+		Artifact<ObservedFile> artifact = new ArtifactImpl<ObservedFile>();
 		// populate general attributes
 		artifact.setArtifactType(ArtifactType.NETWORK);
 		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
 		// set artifact value
-		File observation = fileTests.getFile1();
+		ObservedFile observation = fileTests.getFile1();
 		artifact.setValue(observation);
 		// return value
 		return artifact;

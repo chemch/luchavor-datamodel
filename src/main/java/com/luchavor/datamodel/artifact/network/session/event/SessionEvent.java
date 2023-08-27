@@ -17,8 +17,8 @@ public interface SessionEvent {
 	public void setTimestamp(LocalDateTime timestamp);
 	
 	//uid
-	public String getUid();
-	public void setUid(String uid);
+	public String getCuid();
+	public void setCuid(String uid);
 	
 	// originator ip
 	public String getOriginatorIp();

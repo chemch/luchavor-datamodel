@@ -19,7 +19,7 @@ public class DnsEventTests {
 		DnsEvent event = new DnsEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1689560080.32542));
-		event.setUid("Cn4DGr4nzlVfRjIZe7");
+		event.setCuid("Cn4DGr4nzlVfRjIZe7");
 		event.setOriginatorIp("172.23.250.132");
 		event.setOriginatorPort(36651);
 		event.setResponderIp("172.23.240.1");

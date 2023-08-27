@@ -17,7 +17,7 @@ public abstract class AbstractSessionEvent {
 	private UUID id;
 	// event attributes
 	private LocalDateTime timestamp;
-	private String uid;
+	private String cuid;
 	private String originatorIp;
 	private Integer originatorPort;
 	private String responderIp;

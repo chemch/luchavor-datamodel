@@ -21,7 +21,7 @@ public class SshEventTests {
 		SshEvent event = new SshEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690078090.43959));
-		event.setUid("Cix45G4aiWaMWAwDHl");
+		event.setCuid("Cix45G4aiWaMWAwDHl");
 		event.setOriginatorIp("192.168.2.137");
 		event.setOriginatorPort(51397);
 		event.setResponderIp("192.168.88.60");

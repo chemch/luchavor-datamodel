@@ -21,7 +21,7 @@ public class ModbusEventTests {
 		ModbusEvent event = new ModbusEventImpl();
 		// populate object attributes
 		event.setTimestamp(FieldTypeConverter.convertDoubleEpochTimestamp(1690042948.71936));
-		event.setUid("CoWJh84cqPEHQjFhi8");
+		event.setCuid("CoWJh84cqPEHQjFhi8");
 		event.setOriginatorIp("192.168.2.44");
 		event.setOriginatorPort(58606);
 		event.setResponderIp("192.168.88.61");
