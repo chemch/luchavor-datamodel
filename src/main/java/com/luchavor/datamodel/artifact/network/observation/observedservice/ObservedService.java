@@ -1,11 +1,12 @@
-package com.luchavor.datamodel.artifact.network.observation.service;
+package com.luchavor.datamodel.artifact.network.observation.observedservice;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 
-public interface Service {
+public interface ObservedService {
 	public UUID getId();
 	public void setId(UUID id);
 	public LocalDateTime getTimestamp();
@@ -16,6 +17,6 @@ public interface Service {
 	public void setPort(Integer port);
 	public NetworkProtocolType getNetworkProtocolType();
 	public void setNetworkProtocolType(NetworkProtocolType networkProtocolType);
-	public String getService();
-	public void setService(String service);
+	public List<String> getServices();
+	public void setServices(List<String> service);
 }

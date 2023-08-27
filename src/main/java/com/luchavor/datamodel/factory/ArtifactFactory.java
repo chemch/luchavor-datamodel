@@ -7,6 +7,7 @@ import com.luchavor.datamodel.artifact.ArtifactImpl;
 import com.luchavor.datamodel.artifact.ArtifactSubType;
 import com.luchavor.datamodel.artifact.ArtifactType;
 import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHost;
+import com.luchavor.datamodel.artifact.network.observation.observedservice.ObservedService;
 
 @Component
 public class ArtifactFactory {
@@ -18,6 +19,21 @@ public class ArtifactFactory {
 		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
 		// set artifact value
 		artifact.setValue(observedHost);
+		// update artifact state
+		artifact.setCurrentArtifactState(artifact.getCompleteArtifactState());
+		return artifact;
+	}
+	
+	public Artifact<ObservedService> create(ObservedService observedService) {
+		// create artifact
+		Artifact<ObservedService> artifact = new ArtifactImpl<ObservedService>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
+		// set artifact value
+		artifact.setValue(observedService);
+		// update artifact state
+		artifact.setCurrentArtifactState(artifact.getCompleteArtifactState());
 		return artifact;
 	}
 }

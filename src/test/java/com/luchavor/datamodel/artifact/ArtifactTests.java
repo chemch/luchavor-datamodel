@@ -14,8 +14,8 @@ import com.luchavor.datamodel.artifact.network.observation.executable.Executable
 import com.luchavor.datamodel.artifact.network.observation.file.File;
 import com.luchavor.datamodel.artifact.network.observation.file.FileTests;
 import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHostTests;
+import com.luchavor.datamodel.artifact.network.observation.observedservice.ObservedService;
 import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHost;
-import com.luchavor.datamodel.artifact.network.observation.service.Service;
 import com.luchavor.datamodel.artifact.network.observation.service.ServiceTests;
 import com.luchavor.datamodel.artifact.network.observation.smbfile.SmbFile;
 import com.luchavor.datamodel.artifact.network.observation.smbfile.SmbFileTests;
@@ -115,15 +115,15 @@ public class ArtifactTests {
 		return artifact;
 	}
 	
-	public Artifact<Service> getArtifact7() {
+	public Artifact<ObservedService> getArtifact7() {
 		// test object
-		Artifact<Service> artifact = new ArtifactImpl<Service>();
+		Artifact<ObservedService> artifact = new ArtifactImpl<ObservedService>();
 		// populate general attributes
 		artifact.setArtifactType(ArtifactType.NETWORK);
 		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
 		// set artifact value
-		Service service = serviceTests.getService1();
-		artifact.setValue(service);
+		ObservedService observedService = serviceTests.getService1();
+		artifact.setValue(observedService);
 		// return value
 		return artifact;
 	}

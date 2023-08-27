@@ -1,6 +1,7 @@
-package com.luchavor.datamodel.artifact.network.observation.service;
+package com.luchavor.datamodel.artifact.network.observation.observedservice;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
@@ -12,8 +13,8 @@ import com.luchavor.datamodel.artifact.network.common.NetworkProtocolType;
 import lombok.Data;
 
 @Data
-@Node("Service")
-public class ServiceImpl implements Service {
+@Node("ObservedService")
+public class ObservedServiceImpl implements ObservedService {
 	/* neo4j id */
 	@Id @GeneratedValue 
 	private UUID id;
@@ -22,5 +23,5 @@ public class ServiceImpl implements Service {
 	private String hostIp;
 	private Integer port;
 	private NetworkProtocolType networkProtocolType;
-	private String service;
+	private List<String> services;
 }

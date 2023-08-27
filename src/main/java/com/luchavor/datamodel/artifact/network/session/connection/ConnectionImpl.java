@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 public class ConnectionImpl extends AbstractSessionEvent implements Connection {
 	// static event type
 	private SessionEventType sessionEventType = SessionEventType.CONNECTION;
-	@Property("Service")
+	@Property("ObservedService")
 	private String service;
 	private Double duration;
 	private Integer originatorPayloadByteCount;
