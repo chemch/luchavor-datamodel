@@ -28,5 +28,4 @@ public interface Artifact<A> {
 	// artifact state options
 	public ArtifactState getCompleteArtifactState();
 	public ArtifactState getPartialArtifactState();
-	public ArtifactState getEmptyArtifactState();
 }
