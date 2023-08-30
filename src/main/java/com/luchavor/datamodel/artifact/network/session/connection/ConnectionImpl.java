@@ -38,6 +38,6 @@ public class ConnectionImpl extends AbstractSessionEvent implements Connection {
 	private Integer innerVlan;
 	private String originatorMacAddress;
 	private String responderMacAddress;
-	private String speculativeService;
+	private String communityId;
 	private NetworkProtocolType networkProtocolType;
 }

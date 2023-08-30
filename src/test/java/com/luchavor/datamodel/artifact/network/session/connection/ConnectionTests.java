@@ -40,7 +40,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("00:15:5d:a0:69:5c");
 		connection.setResponderMacAddress("00:15:5d:a0:6f:58");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -74,7 +74,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
 		connection.setResponderMacAddress("00:35:1a:64:79:e2");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -108,7 +108,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
 		connection.setResponderMacAddress("18:03:73:21:54:f1");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -142,7 +142,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
 		connection.setResponderMacAddress("18:03:73:21:54:f1");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -176,7 +176,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
 		connection.setResponderMacAddress("18:03:73:21:54:f1");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -210,7 +210,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
 		connection.setResponderMacAddress("00:35:1a:64:79:e2");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -244,7 +244,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("08:d4:0c:bd:7d:a2");
 		connection.setResponderMacAddress("18:03:73:21:54:f1");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -278,7 +278,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("00:07:7c:1a:61:83");
 		connection.setResponderMacAddress("00:1c:06:01:d4:23");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -312,7 +312,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("00:07:7c:1a:61:83");
 		connection.setResponderMacAddress("00:90:e8:27:8c:37");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -346,7 +346,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("28:cf:e9:18:b5:ed");
 		connection.setResponderMacAddress("00:07:7c:1a:61:83");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -380,7 +380,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("00:07:7c:1a:61:83");
 		connection.setResponderMacAddress("00:90:e8:26:40:23");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -414,7 +414,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("00:e0:1c:3c:17:c2");
 		connection.setResponderMacAddress("00:1f:33:d9:81:60");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}
@@ -448,7 +448,7 @@ public class ConnectionTests {
 		connection.setInnerVlan(null);
 		connection.setOriginatorMacAddress("00:08:02:1c:47:ae");
 		connection.setResponderMacAddress("20:e5:2a:b6:93:f1");
-		connection.setSpeculativeService(null);
+		connection.setCommunityId(null);
 		// return value
 		return(connection);
 	}

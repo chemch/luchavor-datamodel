@@ -6,11 +6,6 @@ import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
-
-import com.luchavor.datamodel.artifact.state.ArtifactState;
-import com.luchavor.datamodel.artifact.state.CompleteArtifactState;
-import com.luchavor.datamodel.artifact.state.PartialArtifactState;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,18 +25,15 @@ public class ArtifactImpl<A> implements Artifact<A> {
 	@Relationship(type = "IS_A")
 	private A value;
 	
-	// artifact state options
-	@Relationship(type = "CAN_BE")
-	private ArtifactState completeArtifactState = new CompleteArtifactState<>(this);
-	@Relationship(type = "CAN_BE")
-	private ArtifactState partialArtifactState = new PartialArtifactState<>(this);
+	// artifact state
+	private ArtifactStateType artifactStateType = ArtifactStateType.EMPTY;
 	
-	// current artifact state (initialized to empty)
-	@Relationship(type = "IS_CURRENTLY")
-	private ArtifactState currentArtifactState = partialArtifactState;
-	
-	// artifact state transition calc
-	public void calculateArtifactState() {
-		currentArtifactState.calculateArtifactState();
+	// artifact state type transition calc
+	public void calculateArtifactStateType() {
+		if( getArtifactType() != null && getArtifactSubType() != null && getValue() != null) {
+			setArtifactStateType(ArtifactStateType.COMPLETE);
+		} else {
+			setArtifactStateType(ArtifactStateType.PARTIAL);
+		}
 	}
 }

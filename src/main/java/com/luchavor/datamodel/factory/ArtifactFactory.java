@@ -10,6 +10,9 @@ import com.luchavor.datamodel.artifact.network.observation.observedfile.Observed
 import com.luchavor.datamodel.artifact.network.observation.observedhost.ObservedHost;
 import com.luchavor.datamodel.artifact.network.observation.observedservice.ObservedService;
 import com.luchavor.datamodel.artifact.network.observation.software.Software;
+import com.luchavor.datamodel.artifact.network.session.Session;
+import com.luchavor.datamodel.artifact.network.session.SessionImpl;
+import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 
 @Component
 public class ArtifactFactory {
@@ -22,7 +25,7 @@ public class ArtifactFactory {
 		// set artifact value
 		artifact.setValue(observedHost);
 		// update artifact state
-		artifact.setCurrentArtifactState(artifact.getCompleteArtifactState());
+		artifact.calculateArtifactStateType();
 		return artifact;
 	}
 	
@@ -35,7 +38,7 @@ public class ArtifactFactory {
 		// set artifact value
 		artifact.setValue(observedService);
 		// update artifact state
-		artifact.getCurrentArtifactState().calculateArtifactState();
+		artifact.calculateArtifactStateType();
 		return artifact;
 	}
 	
@@ -48,7 +51,7 @@ public class ArtifactFactory {
 		// set artifact value
 		artifact.setValue(observedFile);
 		// update artifact state
-		artifact.getCurrentArtifactState().calculateArtifactState();
+		artifact.calculateArtifactStateType();
 		return artifact;
 	}
 	
@@ -61,7 +64,36 @@ public class ArtifactFactory {
 		// set artifact value
 		artifact.setValue(software);
 		// update artifact state
-		artifact.getCurrentArtifactState().calculateArtifactState();
+		artifact.calculateArtifactStateType();
+		return artifact;
+	}
+	
+	public Artifact<Session> create(Connection connection) {
+		// create session
+		Session session = new SessionImpl();
+		session.setConnection(connection);
+		// create artifact
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		artifact.setValue(session);
+		// update artifact state
+		artifact.calculateArtifactStateType();
+		return artifact;
+	}
+	
+	public Artifact<Session> create(Session session) {
+		// create artifact
+		Artifact<Session> artifact = new ArtifactImpl<Session>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		artifact.setValue(session);
+		// update artifact state
+		artifact.calculateArtifactStateType();
 		return artifact;
 	}
 }

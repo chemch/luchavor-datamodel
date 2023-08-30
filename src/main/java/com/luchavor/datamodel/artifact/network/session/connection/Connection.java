@@ -58,9 +58,9 @@ public interface Connection extends SessionEvent {
 	// responder mac 
 	public String getResponderMacAddress();
 	public void setResponderMacAddress(String responderMacAddress);
-	// speculative service
-	public String getSpeculativeService();
-	public void setSpeculativeService(String service);
+	// community id
+	public String getCommunityId();
+	public void setCommunityId(String communityId);
 	// protocol (enum)
 	public NetworkProtocolType getNetworkProtocolType();
 	public void setNetworkProtocolType(NetworkProtocolType protocol);

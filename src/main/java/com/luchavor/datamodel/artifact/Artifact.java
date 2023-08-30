@@ -2,8 +2,6 @@ package com.luchavor.datamodel.artifact;
 
 import java.util.UUID;
 
-import com.luchavor.datamodel.artifact.state.ArtifactState;
-
 public interface Artifact<A> {
 	// neo4j id
 	public UUID getId();
@@ -21,11 +19,8 @@ public interface Artifact<A> {
 	public A getValue();
 	public void setValue(A value);
 	
-	// current artifact state
-	public ArtifactState getCurrentArtifactState();
-	public void setCurrentArtifactState(ArtifactState artifactState);
-	
-	// artifact state options
-	public ArtifactState getCompleteArtifactState();
-	public ArtifactState getPartialArtifactState();
+	// artifact state
+	public ArtifactStateType getArtifactStateType();
+	public void setArtifactStateType(ArtifactStateType artifactStateType);
+	public void calculateArtifactStateType();
 }
