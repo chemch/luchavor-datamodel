@@ -17,7 +17,6 @@ import com.luchavor.datamodel.artifact.network.session.smb.SmbEvent;
 import com.luchavor.datamodel.artifact.network.session.smtp.SmtpEvent;
 import com.luchavor.datamodel.artifact.network.session.ssh.SshEvent;
 import com.luchavor.datamodel.artifact.network.session.ssl.SslEvent;
-import com.luchavor.datamodel.artifact.network.session.state.SessionState;
 
 public interface Session {
 	// neo4j id
@@ -80,11 +79,7 @@ public interface Session {
 	public List<FtpEvent> getFtpEvents();
 	public void setFtpEvents(List<FtpEvent> ftpEvents);
 	
-	// current detection state
-	public SessionState getCurrentSessionState();
-	public void setCurrentSessionState(SessionState sessionState);
-	
-	// state options
-	public SessionState getClosedSessionState();
-	public SessionState getOpenSessionState();
+	// session state
+	public SessionStateType getSessionStateType();
+	public void setSessionStateType(SessionStateType sessionStateType);
 }

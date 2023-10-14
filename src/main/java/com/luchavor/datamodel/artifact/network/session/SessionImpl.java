@@ -22,9 +22,6 @@ import com.luchavor.datamodel.artifact.network.session.smb.SmbEvent;
 import com.luchavor.datamodel.artifact.network.session.smtp.SmtpEvent;
 import com.luchavor.datamodel.artifact.network.session.ssh.SshEvent;
 import com.luchavor.datamodel.artifact.network.session.ssl.SslEvent;
-import com.luchavor.datamodel.artifact.network.session.state.ClosedSessionState;
-import com.luchavor.datamodel.artifact.network.session.state.OpenSessionState;
-import com.luchavor.datamodel.artifact.network.session.state.SessionState;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -70,18 +67,11 @@ public class SessionImpl implements Session {
 	@Relationship(type = "INCLUDES")
 	private List<FtpEvent> ftpEvents;
 	
-	// artifact state options
-	@Relationship(type = "CAN_BE")
-	private SessionState closedSessionState = new ClosedSessionState();
-	@Relationship(type = "CAN_BE")
-	private SessionState openSessionState = new OpenSessionState();
-	
 	// current state (initialized to open)
-	@Relationship(type = "IS_CURRENTLY")
-	private SessionState currentSessionState = openSessionState;
+	private SessionStateType sessionStateType = SessionStateType.OPEN;
 	
 	// state transition calc
-	public void calculateSessionState() {
-		currentSessionState.calculateSessionState();
+	public void calculateSessionStateType() {
+		//
 	}
 }

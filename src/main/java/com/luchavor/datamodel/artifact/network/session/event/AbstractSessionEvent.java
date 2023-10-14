@@ -22,4 +22,5 @@ public abstract class AbstractSessionEvent {
 	private Integer originatorPort;
 	private String responderIp;
 	private Integer responderPort;
+	
 }

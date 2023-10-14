@@ -16,6 +16,7 @@ import com.luchavor.datamodel.artifact.network.session.connection.Connection;
 
 @Component
 public class ArtifactFactory {
+	
 	public Artifact<ObservedHost> create(ObservedHost observedHost) {
 		// create artifact
 		Artifact<ObservedHost> artifact = new ArtifactImpl<ObservedHost>();
