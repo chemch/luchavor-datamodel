@@ -72,6 +72,7 @@ public class ArtifactFactory {
 	public Artifact<Session> create(Connection connection) {
 		// create session
 		Session session = new SessionImpl();
+		// set connection on session
 		session.setConnection(connection);
 		// create artifact
 		Artifact<Session> artifact = new ArtifactImpl<Session>();
