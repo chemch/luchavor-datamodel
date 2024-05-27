@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
+import com.luchavor.datamodel.artifact.network.session.connection.Connection;
+
 public interface ObservedFile {
 	public UUID getId();
 	public void setId(UUID id);
@@ -22,6 +24,8 @@ public interface ObservedFile {
 	public void setResponderPort(Integer responderPort);
 	public String getCuid();
 	public void setCuid(String cuid);
+	public Connection getConnection();
+	public void setConnection(Connection connection);
 	public String getSource();
 	public void setSource(String source);
 	public Integer getDepth();

@@ -13,6 +13,7 @@ import com.luchavor.datamodel.artifact.network.observation.software.Software;
 import com.luchavor.datamodel.artifact.network.session.Session;
 import com.luchavor.datamodel.artifact.network.session.SessionImpl;
 import com.luchavor.datamodel.artifact.network.session.connection.Connection;
+import com.luchavor.datamodel.artifact.network.session.modbus.ModbusEvent;
 
 @Component
 public class ArtifactFactory {
@@ -25,6 +26,19 @@ public class ArtifactFactory {
 		artifact.setArtifactSubType(ArtifactSubType.OBSERVATION);
 		// set artifact value
 		artifact.setValue(observedHost);
+		// update artifact state
+		artifact.calculateArtifactStateType();
+		return artifact;
+	}
+	
+	public Artifact<ModbusEvent> create(ModbusEvent modbusEvent) {
+		// create artifact
+		Artifact<ModbusEvent> artifact = new ArtifactImpl<ModbusEvent>();
+		// populate general attributes
+		artifact.setArtifactType(ArtifactType.NETWORK);
+		artifact.setArtifactSubType(ArtifactSubType.SESSION);
+		// set artifact value
+		artifact.setValue(modbusEvent);
 		// update artifact state
 		artifact.calculateArtifactStateType();
 		return artifact;

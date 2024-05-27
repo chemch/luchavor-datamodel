@@ -24,5 +24,5 @@ public class ObservedHostImpl implements ObservedHost {
 	@JsonProperty("ts")
 	private LocalDateTime timestamp;
 	@JsonProperty("host")
-	private String hostIp;
+	private String hostIp;	
 }

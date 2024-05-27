@@ -6,6 +6,10 @@ import java.util.UUID;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
+
+import com.luchavor.datamodel.artifact.network.session.connection.Connection;
+
 import lombok.Data;
 
 @Data
@@ -22,6 +26,8 @@ public class ObservedFileImpl implements ObservedFile {
 	private Integer originatorPort;
 	private Integer responderPort;
 	private String cuid;
+	@Relationship(type = "VIA")
+	private Connection connection;
 	private String source;
 	private Integer depth;
 	private List<String> analyzers;

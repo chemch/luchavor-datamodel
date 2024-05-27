@@ -17,5 +17,7 @@ public class ModbusEventImpl extends AbstractSessionEvent implements ModbusEvent
 	// static event type
 	private SessionEventType sessionEventType = SessionEventType.MODBUS;
 	private String function;
-	private String exception;
+	private Integer transactionId;
+	private Integer unit;
+	private PduType pduType;
 }

@@ -27,7 +27,6 @@ public class ModbusEventTests {
 		event.setResponderIp("192.168.88.61");
 		event.setResponderPort(502);
 		event.setFunction("unkown-171");
-		event.setException(null);
 		// add events to list
 		events.add(event);
 		// return value
